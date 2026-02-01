@@ -1,14 +1,27 @@
+import StructuredData from "@/components/StructuredData";
 import { siteContent } from "@/content/site-content";
 
 export const metadata = {
   title: "Capabilities — TapasNGS",
+  description: siteContent.capabilities.intro,
+  alternates: { canonical: "/capabilities" },
 };
 
 export default function CapabilitiesPage() {
   const { intro, domains, notes } = siteContent.capabilities;
+  const { meta } = siteContent;
 
   return (
     <section className="px-6 py-32 lg:px-10">
+      <StructuredData
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Capabilities — TapasNGS",
+          description: intro,
+          url: `${meta.siteUrl}/capabilities`,
+        }}
+      />
       <div className="mx-auto max-w-7xl">
         <div className="mb-24 max-w-3xl">
           <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">

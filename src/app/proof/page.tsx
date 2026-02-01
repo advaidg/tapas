@@ -1,13 +1,27 @@
 import ProofConsole from "@/components/ProofConsole";
+import StructuredData from "@/components/StructuredData";
 import { siteContent } from "@/content/site-content";
 
 export const metadata = {
   title: "Proof — TapasNGS",
+  description: siteContent.proof.intro,
+  alternates: { canonical: "/proof" },
 };
 
 export default function ProofPage() {
+  const { meta } = siteContent;
+
   return (
     <section className="px-6 py-32 lg:px-10">
+      <StructuredData
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Proof — TapasNGS",
+          description: siteContent.proof.intro,
+          url: `${meta.siteUrl}/proof`,
+        }}
+      />
       <div className="mx-auto max-w-5xl">
         <div className="mb-16 max-w-2xl">
           <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">

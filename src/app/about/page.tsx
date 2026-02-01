@@ -1,14 +1,27 @@
+import StructuredData from "@/components/StructuredData";
 import { siteContent } from "@/content/site-content";
 
 export const metadata = {
   title: "About — TapasNGS",
+  description: siteContent.about.intro,
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {
   const { intro, values, beliefs, whoWeWorkWith, closing } = siteContent.about;
+  const { meta } = siteContent;
 
   return (
     <section className="px-6 py-32 lg:px-10">
+      <StructuredData
+        data={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          name: "About — TapasNGS",
+          description: intro,
+          url: `${meta.siteUrl}/about`,
+        }}
+      />
       <div className="mx-auto max-w-7xl">
         {/* Hero intro */}
         <div className="mb-32 max-w-3xl">

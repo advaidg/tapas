@@ -3,6 +3,7 @@ import GridField from "@/components/GridField";
 import Pillars from "@/components/Pillars";
 import Principles from "@/components/Principles";
 import ContactForm from "@/components/ContactForm";
+import StructuredData from "@/components/StructuredData";
 import { siteContent } from "@/content/site-content";
 
 export default function Home() {
@@ -14,9 +15,19 @@ export default function Home() {
     approach,
     engagement,
   } = siteContent.home;
+  const { meta } = siteContent;
 
   return (
     <>
+      <StructuredData
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: meta.title,
+          description: meta.description,
+          url: meta.siteUrl,
+        }}
+      />
       {/* Hero */}
       <section className="relative flex min-h-[90vh] items-center overflow-hidden">
         <GridField />

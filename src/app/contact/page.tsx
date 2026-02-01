@@ -1,13 +1,27 @@
 import ContactForm from "@/components/ContactForm";
+import StructuredData from "@/components/StructuredData";
 import { siteContent } from "@/content/site-content";
 
 export const metadata = {
   title: "Contact — TapasNGS",
+  description: siteContent.contact.intro,
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
+  const { meta } = siteContent;
+
   return (
     <section className="px-6 py-32 lg:px-10">
+      <StructuredData
+        data={{
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          name: "Contact — TapasNGS",
+          description: siteContent.contact.intro,
+          url: `${meta.siteUrl}/contact`,
+        }}
+      />
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-16 lg:grid-cols-[1fr_1fr]">
           <div>
