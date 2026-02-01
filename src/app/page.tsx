@@ -14,6 +14,7 @@ export default function Home() {
     problem,
     approach,
     engagement,
+    product,
   } = siteContent.home;
   const { meta } = siteContent;
 
@@ -216,6 +217,49 @@ export default function Home() {
                   {engagement.closing}
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Divider */}
+      <div className="mx-6 border-t border-[var(--border)] lg:mx-10" />
+
+      {/* Product Spotlight */}
+      <section className="px-6 py-28 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:items-center">
+            <div>
+              <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+                Product
+              </span>
+              <h2 className="mb-6 text-3xl font-semibold tracking-tight sm:text-4xl">
+                {product.title}
+              </h2>
+              <p className="mb-8 text-base leading-relaxed text-[var(--text-primary)]">
+                {product.body}
+              </p>
+              <Link
+                href={product.cta.href}
+                className="inline-block border border-[var(--accent)] px-8 py-3.5 font-mono text-[11px] uppercase tracking-[0.1em] text-[var(--accent)] transition-all hover:bg-[var(--accent)] hover:text-[var(--bg)]"
+              >
+                {product.cta.label}
+              </Link>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {product.highlights.map((item, i) => (
+                <div
+                  key={item}
+                  className="border border-[var(--border)] bg-[var(--bg-surface)] p-6"
+                >
+                  <span className="mb-3 block font-mono text-xs text-[var(--accent)]">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <p className="text-sm leading-relaxed text-[var(--text-primary)]">
+                    {item}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

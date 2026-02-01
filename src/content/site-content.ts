@@ -15,6 +15,7 @@ export const siteContent = {
       { label: "Home", href: "/" },
       { label: "About", href: "/about" },
       { label: "Capabilities", href: "/capabilities" },
+      { label: "niotap", href: "/niotap" },
       { label: "Proof", href: "/proof" },
       { label: "Contact", href: "/contact" },
     ],
@@ -92,6 +93,17 @@ export const siteContent = {
         "Tight feedback loops",
       ],
       closing: "We stay small by design. This keeps accountability high\u2014and delivery sharp.",
+    },
+
+    product: {
+      title: "Flagship product: niotap.",
+      body: "niotap is an autonomous inbox operations platform that drafts high-quality replies, escalates edge cases, and keeps a full audit trail\u2014so teams respond faster without losing control.",
+      cta: { label: "Explore niotap", href: "/niotap" },
+      highlights: [
+        "AI-drafted replies grounded in internal knowledge",
+        "Confidence-based auto-reply vs. escalation",
+        "Full visibility with logs, metrics, and auditability",
+      ],
     },
 
     principles: {
@@ -248,6 +260,41 @@ export const siteContent = {
       "We respond with a clear, thoughtful next step\u2014no sales pressure.",
     email: "hello@tapasngs.com",
     formspreeEndpoint: "https://formspree.io/f/xnjzdydz",
+  },
+
+  product: {
+    name: "niotap",
+    tagline:
+      "Autonomous inbox operations for teams that need speed with control.",
+    oneLiner:
+      "niotap drafts high-quality replies, escalates edge cases, and keeps a full audit trail\u2014so teams respond faster without losing control.",
+    whatItSolves:
+      "Support and operations teams spend too much time triaging, drafting, and routing emails. niotap reduces manual effort by automating first-line responses while enforcing rules, knowledge, and escalation policies.",
+    howItWorks: [
+      "Connect an inbox (Gmail or IMAP/SMTP)",
+      "Upload knowledge (FAQs, policies, SOPs, product docs)",
+      "Set automation rules (confidence thresholds, escalation targets, tone)",
+      "Automated response flow drafts replies, applies rules, and escalates where needed",
+      "Full visibility with activity logs, metrics, and auditability",
+    ],
+    capabilities: [
+      "AI-drafted replies grounded in your internal knowledge base",
+      "Confidence-based auto-reply vs. escalation",
+      "Configurable tone, CC rules, and escalation destinations",
+      "Gmail and IMAP/SMTP integrations",
+      "Admin dashboard to manage tenants, users, and mailbox configurations",
+      "Audit trails for every decision and action",
+    ],
+    differentiation:
+      "niotap is not just a chatbot. It is an operations system for email\u2014built for control, compliance, and scale. It blends automation with human oversight and keeps every decision traceable.",
+    audiences: [
+      "Customer support teams",
+      "Operations and compliance teams",
+      "Internal help desks",
+      "Any team handling high-volume, rule-driven email",
+    ],
+    positioning:
+      "niotap is a flagship product within Tapas Next Gen Systems, focused on operational AI. It showcases our approach to building secure, auditable automation systems that plug into real business workflows and deliver measurable efficiency gains.",
   },
 
   privacy: {
