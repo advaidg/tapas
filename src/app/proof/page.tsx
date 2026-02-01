@@ -1,3 +1,4 @@
+import Image from "next/image";
 import ProofConsole from "@/components/ProofConsole";
 import StructuredData from "@/components/StructuredData";
 import { siteContent } from "@/content/site-content";
@@ -10,6 +11,7 @@ export const metadata = {
 
 export default function ProofPage() {
   const { meta } = siteContent;
+  const { product } = siteContent;
 
   return (
     <section className="px-6 py-32 lg:px-10">
@@ -36,6 +38,16 @@ export default function ProofPage() {
           <p className="text-sm leading-relaxed text-[var(--text-secondary)]">
             {siteContent.proof.intro}
           </p>
+        </div>
+        <div className="mb-16 flex flex-wrap items-center gap-4 border border-[var(--border)] bg-[var(--bg-surface)] px-6 py-4">
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+            Flagship product
+          </span>
+          <div className="h-6 w-px bg-[var(--border)]" />
+          <Image src="/niotap.png" alt="niotap" width={96} height={28} />
+          <span className="text-sm text-[var(--text-primary)]">
+            {product.tagline}
+          </span>
         </div>
         <ProofConsole />
 
