@@ -15,6 +15,7 @@ export const siteContent = {
       { label: "Home", href: "/" },
       { label: "About", href: "/about" },
       { label: "Capabilities", href: "/capabilities" },
+      { label: "Products", href: "/products" },
       { label: "Proof", href: "/proof" },
       { label: "Contact", href: "/contact" },
     ],
@@ -324,6 +325,18 @@ export const siteContent = {
     ],
     positioning:
       "niotap is a flagship product within Tapas Next Gen Systems, focused on operational AI. It showcases our approach to building secure, auditable automation systems that plug into real business workflows and deliver measurable efficiency gains.",
+  },
+
+  products: {
+    title: "Products built with operational rigor.",
+    intro:
+      "TapasNGS builds products that prove our engineering philosophy in the real world. niotap is the flagship\u2014an autonomous inbox operations platform built for control, compliance, and scale.",
+    highlights: [
+      "Autonomous inbox operations with confidence gates",
+      "Knowledge-grounded drafting with full audit trails",
+      "Escalation policies for edge cases and compliance",
+    ],
+    cta: { label: "Talk to us about niotap", href: "/contact" },
   },
 
   privacy: {
