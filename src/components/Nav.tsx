@@ -1,0 +1,107 @@
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { siteContent } from "@/content/site-content";
+
+export default function Nav() {
+  const pathname = usePathname();
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const { links } = siteContent.nav;
+
+  return (
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[var(--bg)]/90 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/tapas.png"
+            alt="Tapas"
+            width={80}
+            height={28}
+            className="invert scale-110 origin-left"
+            priority
+          />
+        </Link>
+
+        {/* Desktop */}
+        <div className="hidden items-center gap-10 md:flex">
+          {links.filter(l => l.href !== "/").map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`relative font-mono text-[11px] uppercase tracking-[0.15em] transition-colors ${
+                pathname === link.href
+                  ? "text-[var(--accent)]"
+                  : "text-[var(--text-dim)] hover:text-[var(--text-primary)]"
+              }`}
+            >
+              {link.label}
+              {pathname === link.href && (
+                <motion.span
+                  layoutId="nav-indicator"
+                  className="absolute -bottom-1.5 left-0 right-0 h-px bg-[var(--accent)]"
+                />
+              )}
+            </Link>
+          ))}
+        </div>
+
+        {/* Mobile toggle */}
+        <button
+          className="relative h-8 w-8 md:hidden"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="Toggle menu"
+        >
+          <span
+            className={`absolute left-1 block h-px w-6 bg-[var(--text-secondary)] transition-all duration-300 ${
+              mobileOpen ? "top-4 rotate-45" : "top-2.5"
+            }`}
+          />
+          <span
+            className={`absolute left-1 top-4 block h-px w-6 bg-[var(--text-secondary)] transition-all duration-300 ${
+              mobileOpen ? "opacity-0" : ""
+            }`}
+          />
+          <span
+            className={`absolute left-1 block h-px w-6 bg-[var(--text-secondary)] transition-all duration-300 ${
+              mobileOpen ? "top-4 -rotate-45" : "top-[22px]"
+            }`}
+          />
+        </button>
+      </div>
+
+      {/* Mobile menu */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="overflow-hidden border-t border-[var(--border)] md:hidden"
+          >
+            <div className="flex flex-col gap-1 px-6 py-6">
+              {links.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className={`py-3 font-mono text-xs uppercase tracking-[0.15em] transition-colors ${
+                    pathname === link.href
+                      ? "text-[var(--accent)]"
+                      : "text-[var(--text-dim)] hover:text-[var(--text-primary)]"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
+  );
+}

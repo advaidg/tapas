@@ -1,65 +1,239 @@
-import Image from "next/image";
+import Link from "next/link";
+import GridField from "@/components/GridField";
+import Pillars from "@/components/Pillars";
+import Principles from "@/components/Principles";
+import ContactForm from "@/components/ContactForm";
+import { siteContent } from "@/content/site-content";
 
 export default function Home() {
+  const {
+    hero,
+    proofTeaser,
+    contactCta,
+    problem,
+    approach,
+    engagement,
+  } = siteContent.home;
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <>
+      {/* Hero */}
+      <section className="relative flex min-h-[90vh] items-center overflow-hidden">
+        <GridField />
+
+        {/* Gradient overlay at bottom */}
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[var(--bg)] to-transparent" />
+
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-10">
+          <div className="max-w-4xl">
+            <span className="mb-6 inline-block font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--text-dim)]">
+              Tapas NextGen Systems
+            </span>
+
+            <h1
+              className="mb-8 text-[clamp(2.5rem,7vw,5.5rem)] font-semibold leading-[0.95] tracking-[-0.03em]"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+              <span className="text-[var(--text-primary)]">Engineering, with discipline.</span>
+              <br />
+              <span className="text-[var(--accent)]">Intelligence, with rigor.</span>
+            </h1>
+
+            <p className="mb-10 max-w-xl text-base leading-relaxed text-[var(--text-secondary)]">
+              {hero.subheadline}
+            </p>
+
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="/contact"
+                className="border border-[var(--accent)] bg-[var(--accent)] px-8 py-3.5 font-mono text-[11px] font-medium uppercase tracking-[0.1em] text-[var(--bg)] transition-all hover:bg-transparent hover:text-[var(--accent)]"
+              >
+                {hero.ctas[0].label}
+              </Link>
+              <Link
+                href="/capabilities"
+                className="border border-[var(--border)] px-8 py-3.5 font-mono text-[11px] uppercase tracking-[0.1em] text-[var(--text-dim)] transition-all hover:border-[var(--text-secondary)] hover:text-[var(--text-primary)]"
+              >
+                {hero.ctas[1].label}
+              </Link>
+            </div>
+
+            <p className="mt-16 font-mono text-[10px] tracking-[0.2em] text-[var(--text-dim)]">
+              {hero.microLine}
+            </p>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Divider */}
+      <div className="mx-6 border-t border-[var(--border)] lg:mx-10" />
+
+      {/* Systems We Build */}
+      <Pillars />
+
+      {/* Divider */}
+      <div className="mx-6 border-t border-[var(--border)] lg:mx-10" />
+
+      {/* Problem We Solve */}
+      <section className="px-6 py-28 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr]">
+            <div>
+              <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+                Problem
+              </span>
+              <h2 className="mb-6 text-3xl font-semibold tracking-tight sm:text-4xl">
+                {problem.title}
+              </h2>
+              <p className="text-base leading-relaxed text-[var(--text-primary)]">
+                {problem.body}
+              </p>
+            </div>
+            <div className="border-l border-[var(--border)] pl-6">
+              <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--text-dim)]">
+                Diagnosis
+              </p>
+              <p className="mt-4 text-sm leading-relaxed text-[var(--text-secondary)]">
+                {problem.note}
+              </p>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Divider */}
+      <div className="mx-6 border-t border-[var(--border)] lg:mx-10" />
+
+      {/* Our Approach */}
+      <section className="px-6 py-28 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr]">
+            <div>
+              <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+                Approach
+              </span>
+              <h2 className="mb-6 text-3xl font-semibold tracking-tight sm:text-4xl">
+                {approach.title}
+              </h2>
+              <p className="text-sm leading-relaxed text-[var(--text-secondary)]">
+                {approach.body}
+              </p>
+            </div>
+            <div className="grid gap-4">
+              {approach.points.map((point, i) => (
+                <div
+                  key={point}
+                  className="flex items-start gap-4 border border-[var(--border)] bg-[var(--bg-surface)] p-5"
+                >
+                  <span className="font-mono text-sm text-[var(--accent)]">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <p className="text-sm leading-relaxed text-[var(--text-primary)]">
+                    {point}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Divider */}
+      <div className="mx-6 border-t border-[var(--border)] lg:mx-10" />
+
+      {/* Proof Teaser */}
+      <section className="px-6 py-32 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-12 lg:grid-cols-[2fr_1fr] lg:items-end">
+            <div>
+              <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+                Proof
+              </span>
+              <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
+                {proofTeaser.title}
+              </h2>
+            </div>
+            <div>
+              <p className="mb-8 text-sm leading-relaxed text-[var(--text-secondary)]">
+                {proofTeaser.body}
+              </p>
+              <Link
+                href={proofTeaser.cta.href}
+                className="inline-block border border-[var(--accent)] px-8 py-3.5 font-mono text-[11px] uppercase tracking-[0.1em] text-[var(--accent)] transition-all hover:bg-[var(--accent)] hover:text-[var(--bg)]"
+              >
+                {proofTeaser.cta.label}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Divider */}
+      <div className="mx-6 border-t border-[var(--border)] lg:mx-10" />
+
+      {/* Operating Principles */}
+      <Principles />
+
+      {/* Divider */}
+      <div className="mx-6 border-t border-[var(--border)] lg:mx-10" />
+
+      {/* Engagement Model */}
+      <section className="px-6 py-28 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr]">
+            <div>
+              <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+                How we work
+              </span>
+              <h2 className="mb-6 text-3xl font-semibold tracking-tight sm:text-4xl">
+                {engagement.title}
+              </h2>
+              <p className="text-sm leading-relaxed text-[var(--text-secondary)]">
+                {engagement.body}
+              </p>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {engagement.items.map((item) => (
+                <div
+                  key={item}
+                  className="border border-[var(--border)] bg-[var(--bg)] p-6"
+                >
+                  <p className="text-sm text-[var(--text-primary)]">{item}</p>
+                </div>
+              ))}
+              <div className="border border-[var(--border)] bg-[var(--bg-surface)] p-6 sm:col-span-2">
+                <p className="text-sm leading-relaxed text-[var(--text-primary)]">
+                  {engagement.closing}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Divider */}
+      <div className="mx-6 border-t border-[var(--border)] lg:mx-10" />
+
+      {/* Contact CTA */}
+      <section className="px-6 py-32 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-16 lg:grid-cols-[1fr_1fr]">
+            <div>
+              <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+                Get in touch
+              </span>
+              <h2 className="mb-6 text-3xl font-semibold tracking-tight sm:text-4xl">
+                {contactCta.title}
+              </h2>
+              <p className="text-sm text-[var(--text-dim)]">
+                {contactCta.footerNote}
+              </p>
+            </div>
+            <div>
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
