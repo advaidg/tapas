@@ -103,6 +103,8 @@ export const siteContent = {
         "Confidence-based auto-reply vs. escalation",
         "Full visibility with logs, metrics, and auditability",
       ],
+      detail:
+        "Built for support and operations teams handling high-volume, rule-driven email. niotap blends automation with human oversight and keeps every decision traceable.",
     },
 
     principles: {
@@ -176,6 +178,13 @@ export const siteContent = {
     intro:
       "Representative outcomes from real engagements. Details vary, but the pattern is consistent: signal over noise, rigor over rush.",
     signals: [
+      {
+        id: "00",
+        domain: "AI" as const,
+        context: "High-volume inboxes slowed response times and created inconsistent handling",
+        action: "Deployed niotap with knowledge grounding, confidence gates, and escalation rules",
+        result: "Faster responses with consistent outcomes and full audit trails",
+      },
       {
         id: "01",
         domain: "Quality" as const,

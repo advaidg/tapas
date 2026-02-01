@@ -236,8 +236,11 @@ export default function Home() {
               <h2 className="mb-6 text-3xl font-semibold tracking-tight sm:text-4xl">
                 {product.title}
               </h2>
-              <p className="mb-8 text-base leading-relaxed text-[var(--text-primary)]">
+              <p className="mb-4 text-base leading-relaxed text-[var(--text-primary)]">
                 {product.body}
+              </p>
+              <p className="mb-8 text-sm leading-relaxed text-[var(--text-secondary)]">
+                {product.detail}
               </p>
               <Link
                 href={product.cta.href}
