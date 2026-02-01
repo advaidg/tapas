@@ -107,6 +107,27 @@ export const siteContent = {
         "Built for support and operations teams handling high-volume, rule-driven email. niotap blends automation with human oversight and keeps every decision traceable.",
     },
 
+    highlights: {
+      title: "Recent highlights.",
+      items: [
+        {
+          title: "niotap rollout",
+          description:
+            "Deployed autonomous inbox operations with confidence gating and audit trails for a high-volume support team.",
+        },
+        {
+          title: "CI signal overhaul",
+          description:
+            "Rebuilt flaky automation into reliable release signals with measurable confidence gains.",
+        },
+        {
+          title: "Platform resilience",
+          description:
+            "Introduced golden signals and runbooks to cut incident diagnosis time.",
+        },
+      ],
+    },
+
     principles: {
       title: "The Tapas way.",
       items: [

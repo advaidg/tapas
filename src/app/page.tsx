@@ -15,6 +15,7 @@ export default function Home() {
     approach,
     engagement,
     product,
+    highlights,
   } = siteContent.home;
   const { meta } = siteContent;
 
@@ -218,6 +219,49 @@ export default function Home() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Divider */}
+      <div className="mx-6 border-t border-[var(--border)] lg:mx-10" />
+
+      {/* Recent Highlights */}
+      <section className="px-6 py-28 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 flex items-end justify-between gap-6">
+            <div>
+              <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+                Signals
+              </span>
+              <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+                {highlights.title}
+              </h2>
+            </div>
+            <Link
+              href="/proof"
+              className="hidden border border-[var(--border)] px-6 py-3 font-mono text-[11px] uppercase tracking-[0.1em] text-[var(--text-dim)] transition-all hover:border-[var(--text-secondary)] hover:text-[var(--text-primary)] sm:inline-block"
+            >
+              View proof
+            </Link>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {highlights.items.map((item, i) => (
+              <div
+                key={item.title}
+                className="border border-[var(--border)] bg-[var(--bg-surface)] p-6"
+              >
+                <span className="mb-3 block font-mono text-xs text-[var(--accent)]">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <h3 className="mb-3 text-base font-semibold tracking-tight text-[var(--text-primary)]">
+                  {item.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-[var(--text-secondary)]">
+                  {item.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
