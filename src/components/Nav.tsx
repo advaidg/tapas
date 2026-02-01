@@ -28,7 +28,7 @@ export default function Nav() {
 
         {/* Desktop */}
         <div className="hidden items-center gap-10 md:flex">
-          {links.filter(l => l.href !== "/").map((link) => (
+          {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
