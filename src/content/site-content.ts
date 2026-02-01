@@ -15,7 +15,6 @@ export const siteContent = {
       { label: "Home", href: "/" },
       { label: "About", href: "/about" },
       { label: "Capabilities", href: "/capabilities" },
-      { label: "niotap", href: "/niotap" },
       { label: "Proof", href: "/proof" },
       { label: "Contact", href: "/contact" },
     ],
@@ -98,7 +97,7 @@ export const siteContent = {
     product: {
       title: "Flagship product: niotap.",
       body: "niotap is an autonomous inbox operations platform that drafts high-quality replies, escalates edge cases, and keeps a full audit trail\u2014so teams respond faster without losing control.",
-      cta: { label: "Explore niotap", href: "/niotap" },
+      cta: { label: "See it in Proof", href: "/proof" },
       highlights: [
         "AI-drafted replies grounded in internal knowledge",
         "Confidence-based auto-reply vs. escalation",
