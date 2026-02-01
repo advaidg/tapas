@@ -3,6 +3,10 @@ export const siteContent = {
     title: "TapasNGS — NextGen Systems",
     description:
       "TapasNGS builds modern AI and cloud systems for teams that need reliability, velocity, and measurable outcomes.",
+    siteUrl: "https://tapasngs.com",
+    ogImage: "/og.png",
+    twitter: "@tapasngs",
+    locale: "en_US",
   },
 
   nav: {

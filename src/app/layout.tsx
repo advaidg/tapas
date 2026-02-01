@@ -16,8 +16,38 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: siteContent.meta.title,
+  metadataBase: new URL(siteContent.meta.siteUrl),
+  title: {
+    default: siteContent.meta.title,
+    template: "%s — TapasNGS",
+  },
   description: siteContent.meta.description,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: siteContent.meta.siteUrl,
+    title: siteContent.meta.title,
+    description: siteContent.meta.description,
+    siteName: "TapasNGS",
+    locale: siteContent.meta.locale,
+    images: [
+      {
+        url: siteContent.meta.ogImage,
+        width: 1200,
+        height: 630,
+        alt: "TapasNGS",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteContent.meta.title,
+    description: siteContent.meta.description,
+    images: [siteContent.meta.ogImage],
+    site: siteContent.meta.twitter,
+  },
 };
 
 export default function RootLayout({
@@ -30,6 +60,32 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} grain antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "TapasNGS",
+              url: siteContent.meta.siteUrl,
+              logo: `${siteContent.meta.siteUrl}${siteContent.meta.ogImage}`,
+              sameAs: siteContent.meta.twitter
+                ? [`https://twitter.com/${siteContent.meta.twitter.replace("@", "")}`]
+                : [],
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "TapasNGS",
+              url: siteContent.meta.siteUrl,
+            }),
+          }}
+        />
         <Nav />
         <main className="min-h-screen pt-[72px]">{children}</main>
         <Footer />
