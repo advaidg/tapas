@@ -38,7 +38,7 @@ export default function Home() {
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[var(--bg)] to-transparent" />
 
         <div className="relative z-10 mx-auto w-full max-w-7xl 2xl:max-w-[1600px] px-6 lg:px-10">
-          <div className="grid gap-16 xl:grid-cols-[1.15fr_0.85fr] xl:items-center">
+          <div className="grid gap-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
             <div className="max-w-4xl">
             <h1
               className="mb-8 text-[clamp(2.5rem,7vw,5.5rem)] font-semibold leading-[0.95] tracking-[-0.03em]"
@@ -72,7 +72,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="hidden 2xl:block">
+            <div className="hidden lg:block">
               <div className="mb-6 flex items-center justify-between">
                 <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
                   Signals
