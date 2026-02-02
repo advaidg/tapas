@@ -72,7 +72,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="hidden xl:block">
+            <div className="hidden 2xl:block">
               <div className="mb-6 flex items-center justify-between">
                 <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
                   Signals
