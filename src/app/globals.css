@@ -23,9 +23,9 @@
   --text-primary: #121622;
   --text-secondary: #2b3244;
   --text-dim: #535b72;
-  --accent: #559f00;
-  --accent-muted: rgba(85, 159, 0, 0.18);
-  --accent-glow: rgba(85, 159, 0, 0.08);
+  --accent: #2f6b4f;
+  --accent-muted: rgba(47, 107, 79, 0.18);
+  --accent-glow: rgba(47, 107, 79, 0.08);
 }
 
 @theme inline {
