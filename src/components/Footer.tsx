@@ -7,7 +7,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-[var(--border)]">
-      <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 py-16 lg:px-10">
+      <div className="mx-auto flex max-w-[1400px] flex-col gap-8 px-6 py-16 lg:px-10">
         <div className="flex flex-col justify-between gap-8 sm:flex-row sm:items-end">
           <div>
             <Image

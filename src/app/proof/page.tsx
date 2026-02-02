@@ -14,7 +14,7 @@ export default function ProofPage() {
   const { product } = siteContent;
 
   return (
-    <section className="px-6 py-32 lg:px-10">
+    <section className="px-6 py-32 2xl:py-28 lg:px-10">
       <StructuredData
         data={{
           "@context": "https://schema.org",
@@ -55,7 +55,7 @@ export default function ProofPage() {
           <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
             Example outcomes
           </span>
-          <div className="grid gap-6 lg:grid-cols-3">
+          <div className="grid gap-6 lg:grid-cols-3 xl:grid-cols-4">
             {siteContent.proof.narratives.map((item) => (
               <div
                 key={item.title}

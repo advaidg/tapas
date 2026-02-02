@@ -15,7 +15,7 @@ export default function Nav() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[var(--bg)]/90 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
+      <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5 lg:px-10">
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/tapas.png"
@@ -61,28 +61,31 @@ export default function Nav() {
           <ThemeToggle />
         </div>
 
-        {/* Mobile toggle */}
-        <button
-          className="relative h-8 w-8 md:hidden"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle menu"
-        >
-          <span
-            className={`absolute left-1 block h-px w-6 bg-[var(--text-secondary)] transition-all duration-300 ${
-              mobileOpen ? "top-4 rotate-45" : "top-2.5"
-            }`}
-          />
-          <span
-            className={`absolute left-1 top-4 block h-px w-6 bg-[var(--text-secondary)] transition-all duration-300 ${
-              mobileOpen ? "opacity-0" : ""
-            }`}
-          />
-          <span
-            className={`absolute left-1 block h-px w-6 bg-[var(--text-secondary)] transition-all duration-300 ${
-              mobileOpen ? "top-4 -rotate-45" : "top-[22px]"
-            }`}
-          />
-        </button>
+        {/* Mobile controls */}
+        <div className="flex items-center gap-3 md:hidden">
+          <ThemeToggle />
+          <button
+            className="relative h-8 w-8"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle menu"
+          >
+            <span
+              className={`absolute left-1 block h-px w-6 bg-[var(--text-secondary)] transition-all duration-300 ${
+                mobileOpen ? "top-4 rotate-45" : "top-2.5"
+              }`}
+            />
+            <span
+              className={`absolute left-1 top-4 block h-px w-6 bg-[var(--text-secondary)] transition-all duration-300 ${
+                mobileOpen ? "opacity-0" : ""
+              }`}
+            />
+            <span
+              className={`absolute left-1 block h-px w-6 bg-[var(--text-secondary)] transition-all duration-300 ${
+                mobileOpen ? "top-4 -rotate-45" : "top-[22px]"
+              }`}
+            />
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
@@ -110,9 +113,6 @@ export default function Nav() {
                   {link.label}
                 </Link>
               ))}
-              <div className="pt-4">
-                <ThemeToggle />
-              </div>
             </div>
           </motion.div>
         )}

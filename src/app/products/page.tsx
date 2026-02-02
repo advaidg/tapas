@@ -12,7 +12,7 @@ export default function ProductsPage() {
   const { meta, products, product } = siteContent;
 
   return (
-    <section className="px-6 py-32 lg:px-10">
+    <section className="px-6 py-32 2xl:py-28 lg:px-10">
       <StructuredData
         data={{
           "@context": "https://schema.org",
@@ -22,7 +22,7 @@ export default function ProductsPage() {
           url: `${meta.siteUrl}/products`,
         }}
       />
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-[1400px]">
         <div className="mb-20 max-w-3xl">
           <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
             Products

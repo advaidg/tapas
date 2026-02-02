@@ -7,8 +7,8 @@ export default function Principles() {
   const { title, items } = siteContent.home.principles;
 
   return (
-    <section className="px-6 py-32 lg:px-10">
-      <div className="mx-auto max-w-7xl">
+    <section className="px-6 py-32 2xl:py-28 lg:px-10">
+      <div className="mx-auto max-w-[1400px]">
         <div className="grid gap-16 lg:grid-cols-[1fr_2fr]">
           <div>
             <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">

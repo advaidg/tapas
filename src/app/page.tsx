@@ -37,42 +37,76 @@ export default function Home() {
         {/* Gradient overlay at bottom */}
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[var(--bg)] to-transparent" />
 
-        <div className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-10">
-          <div className="max-w-4xl">
-            <span className="mb-6 inline-block font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--text-dim)]">
-              Tapas NextGen Systems
-            </span>
+        <div className="relative z-10 mx-auto w-full max-w-[1600px] px-6 lg:px-10">
+          <div className="grid gap-16 xl:grid-cols-[1.15fr_0.85fr] xl:items-center">
+            <div className="max-w-4xl">
+              <span className="mb-6 inline-block font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--text-dim)]">
+                Tapas NextGen Systems
+              </span>
 
-            <h1
-              className="mb-8 text-[clamp(2.5rem,7vw,5.5rem)] font-semibold leading-[0.95] tracking-[-0.03em]"
-            >
-              <span className="text-[var(--text-primary)]">Engineering, with discipline.</span>
-              <br />
-              <span className="text-[var(--accent)]">Intelligence, with rigor.</span>
-            </h1>
-
-            <p className="mb-10 max-w-xl text-base leading-relaxed text-[var(--text-secondary)]">
-              {hero.subheadline}
-            </p>
-
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/contact"
-                className="border border-[var(--accent)] bg-[var(--accent)] px-8 py-3.5 font-mono text-[11px] font-medium uppercase tracking-[0.1em] text-[var(--bg)] transition-all hover:bg-transparent hover:text-[var(--accent)]"
+              <h1
+                className="mb-8 text-[clamp(2.5rem,7vw,5.5rem)] font-semibold leading-[0.95] tracking-[-0.03em]"
               >
-                {hero.ctas[0].label}
-              </Link>
-              <Link
-                href="/capabilities"
-                className="border border-[var(--border)] px-8 py-3.5 font-mono text-[11px] uppercase tracking-[0.1em] text-[var(--text-dim)] transition-all hover:border-[var(--text-secondary)] hover:text-[var(--text-primary)]"
-              >
-                {hero.ctas[1].label}
-              </Link>
+                <span className="text-[var(--text-primary)]">Engineering, with discipline.</span>
+                <br />
+                <span className="text-[var(--accent)]">Intelligence, with rigor.</span>
+              </h1>
+
+              <p className="mb-10 max-w-xl text-base leading-relaxed text-[var(--text-secondary)]">
+                {hero.subheadline}
+              </p>
+
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  href="/contact"
+                  className="border border-[var(--accent)] bg-[var(--accent)] px-8 py-3.5 font-mono text-[11px] font-medium uppercase tracking-[0.1em] text-[var(--bg)] transition-all hover:bg-transparent hover:text-[var(--accent)]"
+                >
+                  {hero.ctas[0].label}
+                </Link>
+                <Link
+                  href="/capabilities"
+                  className="border border-[var(--border)] px-8 py-3.5 font-mono text-[11px] uppercase tracking-[0.1em] text-[var(--text-dim)] transition-all hover:border-[var(--text-secondary)] hover:text-[var(--text-primary)]"
+                >
+                  {hero.ctas[1].label}
+                </Link>
+              </div>
+
+              <p className="mt-16 font-mono text-[10px] tracking-[0.2em] text-[var(--text-dim)]">
+                {hero.microLine}
+              </p>
             </div>
 
-            <p className="mt-16 font-mono text-[10px] tracking-[0.2em] text-[var(--text-dim)]">
-              {hero.microLine}
-            </p>
+            <div className="hidden xl:block">
+              <div className="mb-6 flex items-center justify-between">
+                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+                  Signals
+                </span>
+                <Link
+                  href="/proof"
+                  className="font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--text-dim)] transition-colors hover:text-[var(--text-primary)]"
+                >
+                  View proof
+                </Link>
+              </div>
+              <div className="grid gap-4">
+                {highlights.items.slice(0, 3).map((item, i) => (
+                  <div
+                    key={item.title}
+                    className="border border-[var(--border)] bg-[var(--bg-surface)] p-6"
+                  >
+                    <span className="mb-3 block font-mono text-xs text-[var(--accent)]">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <h3 className="mb-2 text-base font-semibold tracking-tight text-[var(--text-primary)]">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm leading-relaxed text-[var(--text-secondary)]">
+                      {item.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -87,8 +121,8 @@ export default function Home() {
       <div className="mx-6 border-t border-[var(--border)] lg:mx-10" />
 
       {/* Problem We Solve */}
-      <section className="px-6 py-28 lg:px-10">
-        <div className="mx-auto max-w-7xl">
+      <section className="px-6 py-28 2xl:py-24 lg:px-10">
+        <div className="mx-auto max-w-[1400px]">
           <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr]">
             <div>
               <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
@@ -117,8 +151,8 @@ export default function Home() {
       <div className="mx-6 border-t border-[var(--border)] lg:mx-10" />
 
       {/* Our Approach */}
-      <section className="px-6 py-28 lg:px-10">
-        <div className="mx-auto max-w-7xl">
+      <section className="px-6 py-28 2xl:py-24 lg:px-10">
+        <div className="mx-auto max-w-[1400px]">
           <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr]">
             <div>
               <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
@@ -154,8 +188,8 @@ export default function Home() {
       <div className="mx-6 border-t border-[var(--border)] lg:mx-10" />
 
       {/* Proof Teaser */}
-      <section className="px-6 py-32 lg:px-10">
-        <div className="mx-auto max-w-7xl">
+      <section className="px-6 py-32 2xl:py-28 lg:px-10">
+        <div className="mx-auto max-w-[1400px]">
           <div className="grid gap-12 lg:grid-cols-[2fr_1fr] lg:items-end">
             <div>
               <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
@@ -190,8 +224,8 @@ export default function Home() {
       <div className="mx-6 border-t border-[var(--border)] lg:mx-10" />
 
       {/* Engagement Model */}
-      <section className="px-6 py-28 lg:px-10">
-        <div className="mx-auto max-w-7xl">
+      <section className="px-6 py-28 2xl:py-24 lg:px-10">
+        <div className="mx-auto max-w-[1400px]">
           <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr]">
             <div>
               <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
@@ -204,7 +238,7 @@ export default function Home() {
                 {engagement.body}
               </p>
             </div>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {engagement.items.map((item) => (
                 <div
                   key={item}
@@ -227,8 +261,8 @@ export default function Home() {
       <div className="mx-6 border-t border-[var(--border)] lg:mx-10" />
 
       {/* Recent Highlights */}
-      <section className="px-6 py-28 lg:px-10">
-        <div className="mx-auto max-w-7xl">
+      <section className="px-6 py-28 2xl:py-24 lg:px-10">
+        <div className="mx-auto max-w-[1400px]">
           <div className="mb-12 flex items-end justify-between gap-6">
             <div>
               <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
@@ -245,7 +279,7 @@ export default function Home() {
               View proof
             </Link>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {highlights.items.map((item, i) => (
               <div
                 key={item.title}
@@ -270,8 +304,8 @@ export default function Home() {
       <div className="mx-6 border-t border-[var(--border)] lg:mx-10" />
 
       {/* Product Spotlight */}
-      <section className="px-6 py-28 lg:px-10">
-        <div className="mx-auto max-w-7xl">
+      <section className="px-6 py-28 2xl:py-24 lg:px-10">
+        <div className="mx-auto max-w-[1400px]">
           <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:items-center">
             <div>
               <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
@@ -293,7 +327,7 @@ export default function Home() {
                 {product.cta.label}
               </Link>
             </div>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {product.highlights.map((item, i) => (
                 <div
                   key={item}
@@ -316,8 +350,8 @@ export default function Home() {
       <div className="mx-6 border-t border-[var(--border)] lg:mx-10" />
 
       {/* Contact CTA */}
-      <section className="px-6 py-32 lg:px-10">
-        <div className="mx-auto max-w-7xl">
+      <section className="px-6 py-32 2xl:py-28 lg:px-10">
+        <div className="mx-auto max-w-[1400px]">
           <div className="grid gap-16 lg:grid-cols-[1fr_1fr]">
             <div>
               <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
