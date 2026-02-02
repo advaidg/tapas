@@ -33,18 +33,10 @@ export default function ThemeToggle() {
       setTheme(next);
     };
 
-    if (media.addEventListener) {
-      media.addEventListener("change", handleChange);
-    } else {
-      media.addListener(handleChange);
-    }
+    media.addEventListener("change", handleChange);
 
     return () => {
-      if (media.addEventListener) {
-        media.removeEventListener("change", handleChange);
-      } else {
-        media.removeListener(handleChange);
-      }
+      media.removeEventListener("change", handleChange);
     };
   }, []);
 
