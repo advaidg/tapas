@@ -15,7 +15,14 @@ export default function Footer() {
               alt="Tapas"
               width={64}
               height={22}
-              className="mb-4 invert opacity-40 scale-110 origin-left"
+              className="logo-dark mb-4 invert opacity-40 scale-110 origin-left"
+            />
+            <Image
+              src="/tapas_lite.png"
+              alt="Tapas"
+              width={64}
+              height={22}
+              className="logo-light mb-4 opacity-70 scale-110 origin-left"
             />
             <p className="max-w-xs text-xs leading-relaxed text-[var(--text-dim)]">
               Modern AI and cloud systems. Built with discipline, delivered with rigor.

@@ -56,10 +56,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" data-theme="dark">
       <body
         className={`${geistSans.variable} ${geistMono.variable} grain antialiased`}
       >
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var stored=localStorage.getItem("theme");var prefers=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";var next=stored||prefers;document.documentElement.dataset.theme=next;}catch(e){}})();`,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

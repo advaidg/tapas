@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { siteContent } from "@/content/site-content";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Nav() {
   const pathname = usePathname();
@@ -21,32 +22,43 @@ export default function Nav() {
             alt="Tapas"
             width={80}
             height={28}
-            className="invert scale-110 origin-left"
+            className="logo-dark invert scale-110 origin-left"
+            priority
+          />
+          <Image
+            src="/tapas_lite.png"
+            alt="Tapas"
+            width={80}
+            height={28}
+            className="logo-light scale-110 origin-left"
             priority
           />
         </Link>
 
         {/* Desktop */}
-        <div className="hidden items-center gap-10 md:flex">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`relative font-mono text-[11px] uppercase tracking-[0.15em] transition-colors ${
-                pathname === link.href
-                  ? "text-[var(--accent)]"
-                  : "text-[var(--text-dim)] hover:text-[var(--text-primary)]"
-              }`}
-            >
-              {link.label}
-              {pathname === link.href && (
-                <motion.span
-                  layoutId="nav-indicator"
-                  className="absolute -bottom-1.5 left-0 right-0 h-px bg-[var(--accent)]"
-                />
-              )}
-            </Link>
-          ))}
+        <div className="hidden items-center gap-8 md:flex">
+          <div className="flex items-center gap-10">
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`relative font-mono text-[11px] uppercase tracking-[0.15em] transition-colors ${
+                  pathname === link.href
+                    ? "text-[var(--accent)]"
+                    : "text-[var(--text-dim)] hover:text-[var(--text-primary)]"
+                }`}
+              >
+                {link.label}
+                {pathname === link.href && (
+                  <motion.span
+                    layoutId="nav-indicator"
+                    className="absolute -bottom-1.5 left-0 right-0 h-px bg-[var(--accent)]"
+                  />
+                )}
+              </Link>
+            ))}
+          </div>
+          <ThemeToggle />
         </div>
 
         {/* Mobile toggle */}
@@ -98,6 +110,9 @@ export default function Nav() {
                   {link.label}
                 </Link>
               ))}
+              <div className="pt-4">
+                <ThemeToggle />
+              </div>
             </div>
           </motion.div>
         )}
