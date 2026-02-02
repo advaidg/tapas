@@ -22,7 +22,7 @@ export default function AboutPage() {
           url: `${meta.siteUrl}/about`,
         }}
       />
-      <div className="mx-auto max-w-[1400px]">
+      <div className="mx-auto max-w-7xl 2xl:max-w-7xl 2xl:max-w-[1600px]">
         {/* Hero intro */}
         <div className="mb-32 max-w-3xl">
           <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
@@ -87,7 +87,7 @@ export default function AboutPage() {
           <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
             Who we work with
           </span>
-          <div className="grid gap-px bg-[var(--border)] sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="grid gap-px bg-[var(--border)] sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
             {whoWeWorkWith.map((item, i) => (
               <div key={item} className="bg-[var(--bg)] p-6 sm:p-8">
                 <span className="mb-4 block font-mono text-sm text-[var(--accent)]">

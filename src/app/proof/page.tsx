@@ -55,7 +55,7 @@ export default function ProofPage() {
           <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
             Example outcomes
           </span>
-          <div className="grid gap-6 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="grid gap-6 lg:grid-cols-3 2xl:grid-cols-4">
             {siteContent.proof.narratives.map((item) => (
               <div
                 key={item.title}

@@ -7,23 +7,29 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-[var(--border)]">
-      <div className="mx-auto flex max-w-[1400px] flex-col gap-8 px-6 py-16 lg:px-10">
+      <div className="mx-auto flex max-w-7xl 2xl:max-w-7xl 2xl:max-w-[1600px] flex-col gap-8 px-6 py-16 lg:px-10">
         <div className="flex flex-col justify-between gap-8 sm:flex-row sm:items-end">
           <div>
-            <Image
-              src="/tapas.png"
-              alt="Tapas"
-              width={64}
-              height={22}
-              className="logo-dark mb-4 invert opacity-40 scale-110 origin-left"
-            />
-            <Image
-              src="/tapas_lite.png"
-              alt="Tapas"
-              width={64}
-              height={22}
-              className="logo-light mb-4 opacity-70 scale-110 origin-left"
-            />
+            <div className="mb-4 flex items-center gap-3">
+              <Image
+                src="/tapas.png"
+                alt="Tapas"
+                width={64}
+                height={22}
+                className="logo-dark invert opacity-40 scale-110 origin-left"
+              />
+              <Image
+                src="/tapas_lite.png"
+                alt="Tapas"
+                width={64}
+                height={22}
+                className="logo-light opacity-70 scale-110 origin-left"
+              />
+              <span className="hidden h-4 w-px bg-[var(--border)] sm:inline-block" />
+              <span className="hidden font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--text-dim)] sm:inline-block">
+                Tapas NextGen Systems
+              </span>
+            </div>
             <p className="max-w-xs text-xs leading-relaxed text-[var(--text-dim)]">
               Modern AI and cloud systems. Built with discipline, delivered with rigor.
             </p>

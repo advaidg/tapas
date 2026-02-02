@@ -37,16 +37,12 @@ export default function Home() {
         {/* Gradient overlay at bottom */}
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[var(--bg)] to-transparent" />
 
-        <div className="relative z-10 mx-auto w-full max-w-[1600px] px-6 lg:px-10">
+        <div className="relative z-10 mx-auto w-full max-w-7xl 2xl:max-w-[1600px] px-6 lg:px-10">
           <div className="grid gap-16 xl:grid-cols-[1.15fr_0.85fr] xl:items-center">
             <div className="max-w-4xl">
-              <span className="mb-6 inline-block font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--text-dim)]">
-                Tapas NextGen Systems
-              </span>
-
-              <h1
-                className="mb-8 text-[clamp(2.5rem,7vw,5.5rem)] font-semibold leading-[0.95] tracking-[-0.03em]"
-              >
+            <h1
+              className="mb-8 text-[clamp(2.5rem,7vw,5.5rem)] font-semibold leading-[0.95] tracking-[-0.03em]"
+            >
                 <span className="text-[var(--text-primary)]">Engineering, with discipline.</span>
                 <br />
                 <span className="text-[var(--accent)]">Intelligence, with rigor.</span>
@@ -122,7 +118,7 @@ export default function Home() {
 
       {/* Problem We Solve */}
       <section className="px-6 py-28 2xl:py-24 lg:px-10">
-        <div className="mx-auto max-w-[1400px]">
+        <div className="mx-auto max-w-7xl 2xl:max-w-7xl 2xl:max-w-[1600px]">
           <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr]">
             <div>
               <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
@@ -152,7 +148,7 @@ export default function Home() {
 
       {/* Our Approach */}
       <section className="px-6 py-28 2xl:py-24 lg:px-10">
-        <div className="mx-auto max-w-[1400px]">
+        <div className="mx-auto max-w-7xl 2xl:max-w-7xl 2xl:max-w-[1600px]">
           <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr]">
             <div>
               <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
@@ -189,7 +185,7 @@ export default function Home() {
 
       {/* Proof Teaser */}
       <section className="px-6 py-32 2xl:py-28 lg:px-10">
-        <div className="mx-auto max-w-[1400px]">
+        <div className="mx-auto max-w-7xl 2xl:max-w-7xl 2xl:max-w-[1600px]">
           <div className="grid gap-12 lg:grid-cols-[2fr_1fr] lg:items-end">
             <div>
               <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
@@ -225,7 +221,7 @@ export default function Home() {
 
       {/* Engagement Model */}
       <section className="px-6 py-28 2xl:py-24 lg:px-10">
-        <div className="mx-auto max-w-[1400px]">
+        <div className="mx-auto max-w-7xl 2xl:max-w-7xl 2xl:max-w-[1600px]">
           <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr]">
             <div>
               <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
@@ -238,7 +234,7 @@ export default function Home() {
                 {engagement.body}
               </p>
             </div>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
               {engagement.items.map((item) => (
                 <div
                   key={item}
@@ -262,7 +258,7 @@ export default function Home() {
 
       {/* Recent Highlights */}
       <section className="px-6 py-28 2xl:py-24 lg:px-10">
-        <div className="mx-auto max-w-[1400px]">
+        <div className="mx-auto max-w-7xl 2xl:max-w-7xl 2xl:max-w-[1600px]">
           <div className="mb-12 flex items-end justify-between gap-6">
             <div>
               <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
@@ -279,7 +275,7 @@ export default function Home() {
               View proof
             </Link>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
             {highlights.items.map((item, i) => (
               <div
                 key={item.title}
@@ -305,7 +301,7 @@ export default function Home() {
 
       {/* Product Spotlight */}
       <section className="px-6 py-28 2xl:py-24 lg:px-10">
-        <div className="mx-auto max-w-[1400px]">
+        <div className="mx-auto max-w-7xl 2xl:max-w-7xl 2xl:max-w-[1600px]">
           <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:items-center">
             <div>
               <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
@@ -327,7 +323,7 @@ export default function Home() {
                 {product.cta.label}
               </Link>
             </div>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
               {product.highlights.map((item, i) => (
                 <div
                   key={item}
@@ -351,7 +347,7 @@ export default function Home() {
 
       {/* Contact CTA */}
       <section className="px-6 py-32 2xl:py-28 lg:px-10">
-        <div className="mx-auto max-w-[1400px]">
+        <div className="mx-auto max-w-7xl 2xl:max-w-7xl 2xl:max-w-[1600px]">
           <div className="grid gap-16 lg:grid-cols-[1fr_1fr]">
             <div>
               <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">

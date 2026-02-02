@@ -15,24 +15,30 @@ export default function Nav() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[var(--bg)]/90 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5 lg:px-10">
-        <Link href="/" className="flex items-center gap-3">
-          <Image
-            src="/tapas.png"
-            alt="Tapas"
-            width={80}
-            height={28}
-            className="logo-dark invert scale-110 origin-left"
-            priority
-          />
-          <Image
-            src="/tapas_lite.png"
-            alt="Tapas"
-            width={80}
-            height={28}
-            className="logo-light scale-110 origin-left"
-            priority
-          />
+      <div className="mx-auto flex max-w-7xl 2xl:max-w-7xl 2xl:max-w-[1600px] items-center justify-between px-6 py-5 lg:px-10">
+        <Link href="/" className="group flex items-center gap-4">
+          <div className="flex items-center gap-3">
+            <Image
+              src="/tapas.png"
+              alt="Tapas"
+              width={80}
+              height={28}
+              className="logo-dark invert scale-110 origin-left"
+              priority
+            />
+            <Image
+              src="/tapas_lite.png"
+              alt="Tapas"
+              width={80}
+              height={28}
+              className="logo-light scale-110 origin-left"
+              priority
+            />
+            <span className="hidden h-5 w-px bg-[var(--border)] sm:inline-block" />
+          </div>
+          <span className="hidden max-w-[200px] font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--text-dim)] transition-colors group-hover:text-[var(--text-secondary)] sm:inline-block">
+            Tapas NextGen Systems
+          </span>
         </Link>
 
         {/* Desktop */}

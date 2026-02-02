@@ -22,7 +22,7 @@ export default function ContactPage() {
           url: `${meta.siteUrl}/contact`,
         }}
       />
-      <div className="mx-auto max-w-[1400px]">
+      <div className="mx-auto max-w-7xl 2xl:max-w-7xl 2xl:max-w-[1600px]">
         <div className="grid gap-16 lg:grid-cols-[1fr_1fr]">
           <div>
             <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">

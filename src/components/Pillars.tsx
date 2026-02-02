@@ -15,7 +15,7 @@ export default function Pillars() {
 
   return (
     <section className="relative px-6 py-32 2xl:py-28 lg:px-10">
-      <div className="mx-auto max-w-[1400px]">
+      <div className="mx-auto max-w-7xl 2xl:max-w-7xl 2xl:max-w-[1600px]">
         <div className="mb-20 max-w-3xl">
           <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
             What we build

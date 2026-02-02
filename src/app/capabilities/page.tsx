@@ -22,7 +22,7 @@ export default function CapabilitiesPage() {
           url: `${meta.siteUrl}/capabilities`,
         }}
       />
-      <div className="mx-auto max-w-[1400px]">
+      <div className="mx-auto max-w-7xl 2xl:max-w-7xl 2xl:max-w-[1600px]">
         <div className="mb-24 max-w-3xl">
           <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
             Capabilities
@@ -32,7 +32,7 @@ export default function CapabilitiesPage() {
           </p>
         </div>
 
-        <div className="grid gap-px bg-[var(--border)] sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid gap-px bg-[var(--border)] sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           {domains.map((domain, i) => (
             <div
               key={domain.title}
@@ -65,7 +65,7 @@ export default function CapabilitiesPage() {
           <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
             Design stance
           </span>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
             {notes.map((note, i) => (
               <div
                 key={note}
