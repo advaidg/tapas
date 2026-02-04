@@ -26,7 +26,7 @@ export default function Footer() {
                 className="logo-light opacity-70 scale-110 origin-left"
               />
               <span className="hidden h-4 w-px bg-[var(--border)] sm:inline-block" />
-              <span className="hidden font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--text-dim)] sm:inline-block">
+              <span className="hidden font-mono text-[15px] font-semibold uppercase tracking-[0.16em] text-[var(--text-primary)] sm:inline-block">
                 Tapas NextGen Systems
               </span>
             </div>
@@ -40,7 +40,7 @@ export default function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--text-dim)] transition-colors hover:text-[var(--text-secondary)]"
+                className="font-mono text-[15px] font-semibold uppercase tracking-[0.14em] text-[var(--text-primary)] transition-colors hover:text-[var(--text-secondary)]"
               >
                 {link.label}
               </Link>

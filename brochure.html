@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TapasNGS — Brochure</title>
+    <style>
+      :root {
+        --bg: #0b1116;
+        --bg-surface: #131b22;
+        --bg-elevated: #1a2530;
+        --border: #263341;
+        --text-primary: #f4f7fb;
+        --text-secondary: #c0c8d4;
+        --text-dim: #8e9aaa;
+        --accent: #46d6c7;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+        color: var(--text-primary);
+        font-family: "Geist", "Geist Sans", system-ui, -apple-system, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body {
+        scroll-snap-type: y mandatory;
+        overflow-y: auto;
+      }
+
+      .slide {
+        position: relative;
+        min-height: 100vh;
+        padding: 64px 72px;
+        scroll-snap-align: start;
+        display: grid;
+        align-content: center;
+        gap: 28px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .slide::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(900px 500px at 10% 0%, rgba(70, 214, 199, 0.12), transparent 60%),
+          radial-gradient(800px 400px at 90% 10%, rgba(86, 139, 255, 0.08), transparent 60%);
+        pointer-events: none;
+        opacity: 0.6;
+      }
+
+      .frame {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 18px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .logo img {
+        height: 28px;
+        width: auto;
+      }
+
+      .divider {
+        width: 1px;
+        height: 18px;
+        background: var(--border);
+      }
+
+      .brand {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        color: var(--text-dim);
+      }
+
+      .title {
+        font-size: clamp(2.4rem, 4.6vw, 4.4rem);
+        font-weight: 600;
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+        margin: 0;
+      }
+
+      .title .accent {
+        color: var(--accent);
+      }
+
+      .subtitle {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        color: var(--text-secondary);
+        max-width: 720px;
+        margin: 0;
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 36px;
+        align-items: start;
+      }
+
+      .card {
+        border: 1px solid var(--border);
+        background: var(--bg-surface);
+        padding: 22px;
+      }
+
+      .kicker {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: var(--text-dim);
+        margin: 0 0 10px 0;
+      }
+
+      .list {
+        display: grid;
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .list li {
+        display: grid;
+        grid-template-columns: 24px 1fr;
+        gap: 10px;
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+      }
+
+      .num {
+        font-family: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+        color: var(--accent);
+      }
+
+      .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 11px;
+        color: var(--text-dim);
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        margin-top: 28px;
+      }
+
+      .signals {
+        display: grid;
+        gap: 16px;
+      }
+
+      .signal-card {
+        border: 1px solid var(--border);
+        background: var(--bg-surface);
+        padding: 18px 20px;
+      }
+
+      .signal-title {
+        font-size: 0.95rem;
+        margin: 6px 0;
+      }
+
+      .signal-body {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        line-height: 1.5;
+        margin: 0;
+      }
+
+      .cta-row {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        border: 1px solid var(--accent);
+        background: var(--accent);
+        color: #0a0b0f;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        padding: 12px 20px;
+        text-decoration: none;
+        font-family: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+        display: inline-block;
+      }
+
+      .btn.secondary {
+        border-color: var(--border);
+        background: transparent;
+        color: var(--text-dim);
+      }
+
+      @media (max-width: 900px) {
+        .slide {
+          padding: 56px 28px;
+        }
+
+        .grid-2 {
+          grid-template-columns: 1fr;
+        }
+
+        .footer {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Slide 1 -->
+    <section class="slide">
+      <div class="frame">
+        <div class="header">
+          <div class="logo">
+            <img src="/tapas.png" alt="TapasNGS" />
+            <span class="divider"></span>
+            <span class="brand">Tapas Software</span>
+          </div>
+        </div>
+        <h1 class="title">
+          Software, built with discipline.<br />
+          <span class="accent">Products, built with rigor.</span>
+        </h1>
+        <p class="subtitle">
+          Tapas builds reliable software platforms for teams that need speed,
+          resilience, and measurable outcomes—without compromise.
+        </p>
+        <div class="cta-row">
+          <span class="btn">Book a demo</span>
+          <span class="btn secondary">See the platform</span>
+        </div>
+        <div class="footer">
+          <span>Slide 01</span>
+          <span>Built for teams that ship.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 2 -->
+    <section class="slide">
+      <div class="frame">
+        <p class="kicker">The Problem</p>
+        <h2 class="title">Modern software ships fast—and breaks quietly.</h2>
+        <div class="grid-2">
+          <p class="subtitle">
+            Delivery is fast, but operational quality is uneven. Teams lack clear
+            signal, and reliability becomes reactive instead of engineered.
+          </p>
+          <div class="card">
+            <p class="kicker">Diagnosis</p>
+            <p class="subtitle">
+              The gap isn’t talent. It’s a lack of product-grade systems and
+              repeatable operational workflows.
+            </p>
+          </div>
+        </div>
+        <div class="footer">
+          <span>Slide 02</span>
+          <span>Clarity first. Proof always.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 3 -->
+    <section class="slide">
+      <div class="frame">
+        <p class="kicker">How We Build</p>
+        <h2 class="title">Roadmap, systems, and outcomes.</h2>
+        <div class="grid-2">
+          <p class="subtitle">
+            We align on outcomes, then build software systems that create
+            measurable impact with clear ownership and accountability.
+          </p>
+          <ul class="list">
+            <li><span class="num">01</span>Clear product scope and success metrics</li>
+            <li><span class="num">02</span>Reliable delivery with quality gates</li>
+            <li><span class="num">03</span>Operational visibility and ownership</li>
+            <li><span class="num">04</span>Continuous improvement loops</li>
+          </ul>
+        </div>
+        <div class="footer">
+          <span>Slide 03</span>
+          <span>Senior, hands-on product engineers.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 4 -->
+    <section class="slide">
+      <div class="frame">
+        <p class="kicker">Capabilities</p>
+        <h2 class="title">Software platforms built to scale.</h2>
+        <div class="grid-2">
+          <ul class="list">
+            <li><span class="num">01</span>Platform Engineering — secure infra, observability</li>
+            <li><span class="num">02</span>Product Development — web, API, mobile</li>
+          </ul>
+          <ul class="list">
+            <li><span class="num">03</span>Reliability & QA — testing, SLOs, incident workflows</li>
+            <li><span class="num">04</span>Data Systems — analytics pipelines and search</li>
+          </ul>
+        </div>
+        <div class="footer">
+          <span>Slide 04</span>
+          <span>Engineering across product, platform, and data.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 5 -->
+    <section class="slide">
+      <div class="frame">
+        <p class="kicker">Flagship Product</p>
+        <h2 class="title">Flowdesk — unified support ops.</h2>
+        <div class="grid-2">
+          <p class="subtitle">
+            Flowdesk unifies support workflows, automates triage, and keeps every
+            decision traceable—so teams resolve faster without losing control.
+          </p>
+          <div class="card">
+            <p class="kicker">Highlights</p>
+            <ul class="list">
+              <li><span class="num">01</span>Smart routing and SLA enforcement</li>
+              <li><span class="num">02</span>Automated triage with human review</li>
+              <li><span class="num">03</span>Full visibility with logs and dashboards</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer">
+          <span>Slide 05</span>
+          <span>Built for control, compliance, and scale.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 6 -->
+    <section class="slide">
+      <div class="frame">
+        <p class="kicker">Outcomes</p>
+        <h2 class="title">Proof is operational—and repeatable.</h2>
+        <div class="grid-2">
+          <p class="subtitle">
+            We show the metrics that matter—what changed, what improved, and what
+            became easier to operate.
+          </p>
+          <div class="signals">
+            <div class="signal-card">
+              <span class="num">01</span>
+              <p class="signal-title">Flowdesk launch</p>
+              <p class="signal-body">
+                Reduced response time by 42% and improved CSAT.
+              </p>
+            </div>
+            <div class="signal-card">
+              <span class="num">02</span>
+              <p class="signal-title">Release reliability</p>
+              <p class="signal-body">
+                Cut production incidents by 35% with QA automation and SLOs.
+              </p>
+            </div>
+            <div class="signal-card">
+              <span class="num">03</span>
+              <p class="signal-title">Platform resilience</p>
+              <p class="signal-body">
+                Improved uptime to 99.95% with observability and runbooks.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <span>Slide 06</span>
+          <span>Signal over noise. Rigor over rush.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 7 -->
+    <section class="slide">
+      <div class="frame">
+        <p class="kicker">Contact</p>
+        <h2 class="title">Let’s build software that lasts.</h2>
+        <div class="grid-2">
+          <p class="subtitle">
+            Share your roadmap. We’ll respond with a clear scope and the next
+            step toward delivery.
+          </p>
+          <div class="card">
+            <p class="kicker">Reach us</p>
+            <p class="subtitle">hello@tapasngs.com</p>
+            <p class="subtitle">Tapas Software</p>
+          </div>
+        </div>
+        <div class="footer">
+          <span>Slide 07</span>
+          <span>No spam. No pressure. Just clarity.</span>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

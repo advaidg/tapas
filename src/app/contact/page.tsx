@@ -25,7 +25,7 @@ export default function ContactPage() {
       <div className="mx-auto max-w-7xl 2xl:max-w-7xl 2xl:max-w-[1600px]">
         <div className="grid gap-16 lg:grid-cols-[1fr_1fr]">
           <div>
-            <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+            <span className="mb-6 block font-mono text-[15px] font-semibold uppercase tracking-[0.16em] text-[var(--text-primary)]">
               Contact
             </span>
             <h1 className="mb-6 text-3xl font-semibold tracking-tight sm:text-4xl">

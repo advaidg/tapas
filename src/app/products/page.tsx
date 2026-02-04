@@ -24,7 +24,7 @@ export default function ProductsPage() {
       />
       <div className="mx-auto max-w-7xl 2xl:max-w-7xl 2xl:max-w-[1600px]">
         <div className="mb-20 max-w-3xl">
-          <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+          <span className="mb-6 block font-mono text-[15px] font-semibold uppercase tracking-[0.16em] text-[var(--text-primary)]">
             Products
           </span>
           <h1 className="mb-6 text-4xl font-semibold tracking-tight sm:text-5xl">
@@ -39,7 +39,7 @@ export default function ProductsPage() {
           <div className="border border-[var(--border)] bg-[var(--bg-surface)] p-8 sm:p-10">
             <div className="mb-6 flex items-center gap-4">
               <Image src="/niotap.png" alt="niotap" width={120} height={32} />
-              <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+              <span className="font-mono text-[15px] font-semibold uppercase tracking-[0.16em] text-[var(--text-primary)]">
                 Flagship
               </span>
             </div>
@@ -77,7 +77,7 @@ export default function ProductsPage() {
           </p>
           <a
             href={products.cta.href}
-            className="inline-block border border-[var(--accent)] px-8 py-3.5 font-mono text-[11px] uppercase tracking-[0.1em] text-[var(--accent)] transition-all hover:bg-[var(--accent)] hover:text-[var(--bg)]"
+            className="inline-block border border-[var(--accent)] px-8 py-3.5 font-mono text-[12px] uppercase tracking-[0.1em] text-[var(--accent)] transition-all hover:bg-[var(--accent)] hover:text-[var(--bg)]"
           >
             {products.cta.label}
           </a>

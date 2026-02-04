@@ -24,45 +24,57 @@ export default function AboutPage() {
       />
       <div className="mx-auto max-w-7xl 2xl:max-w-7xl 2xl:max-w-[1600px]">
         {/* Hero intro */}
-        <div className="mb-32 max-w-3xl">
-          <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+        <div className="mb-24 max-w-none">
+          <span className="mb-6 block font-mono text-[15px] font-semibold uppercase tracking-[0.16em] text-[var(--text-primary)]">
             About
           </span>
-          <p className="text-2xl leading-relaxed tracking-tight text-[var(--text-primary)] sm:text-3xl">
+          <p className="max-w-none text-lg leading-relaxed text-[var(--text-secondary)] sm:text-xl text-justify">
             {intro}
           </p>
         </div>
 
         {/* Values */}
         <div className="mb-32">
-          <span className="mb-12 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+          <span className="mb-12 block font-mono text-[15px] font-semibold uppercase tracking-[0.16em] text-[var(--text-primary)]">
             Values
           </span>
-          <div className="grid gap-px bg-[var(--border)] sm:grid-cols-3 lg:grid-cols-5">
-            {values.map((value, i) => (
+          <div className="grid gap-px bg-[var(--border)] sm:grid-cols-2 xl:grid-cols-5">
+            {values.map((value, i) => {
+              const parts = value.split(" — ");
+              const title = parts[0] ?? value;
+              const detail = parts.slice(1).join(" — ");
+              return (
               <div
                 key={value}
                 className="group bg-[var(--bg)] p-8 transition-colors hover:bg-[var(--bg-surface)]"
               >
-                <span className="mb-6 block font-mono text-2xl font-light text-[var(--border-accent)] transition-colors group-hover:text-[var(--accent)]">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <span className="text-sm font-medium text-[var(--text-primary)]">
-                  {value}
-                </span>
+                <div className="mb-3 flex items-center gap-3">
+                  <span className="font-mono text-lg font-light text-[var(--border-accent)] transition-colors group-hover:text-[var(--accent)]">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span className="text-sm font-semibold uppercase tracking-[0.12em] text-[var(--text-primary)]">
+                    {title}
+                  </span>
+                </div>
+                {detail && (
+                  <p className="text-sm leading-relaxed text-[var(--text-secondary)]">
+                    {detail}
+                  </p>
+                )}
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
         {/* Beliefs */}
-        <div className="mb-32 grid gap-12 lg:grid-cols-[1fr_1.5fr]">
+        <div className="mb-28 grid gap-12 lg:grid-cols-[1fr_1.5fr]">
           <div>
-            <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+            <span className="mb-6 block font-mono text-[15px] font-semibold uppercase tracking-[0.16em] text-[var(--text-primary)]">
               Beliefs
             </span>
-            <p className="text-xl leading-relaxed tracking-tight text-[var(--text-primary)]">
-              Our work sits at the intersection of AI, cloud, quality, and data\u2014where complexity is real and discipline matters most.
+            <p className="text-base leading-relaxed text-[var(--text-secondary)]">
+              Our work sits at the intersection of AI, software, and reliability—where clarity and discipline matter most.
             </p>
           </div>
           <div className="grid gap-4">
@@ -83,11 +95,11 @@ export default function AboutPage() {
         </div>
 
         {/* Who We Work With */}
-        <div className="mb-32">
-          <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+        <div className="mb-28">
+          <span className="mb-6 block font-mono text-[15px] font-semibold uppercase tracking-[0.16em] text-[var(--text-primary)]">
             Who we work with
           </span>
-          <div className="grid gap-px bg-[var(--border)] sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+          <div className="grid gap-px bg-[var(--border)] sm:grid-cols-2 xl:grid-cols-4">
             {whoWeWorkWith.map((item, i) => (
               <div key={item} className="bg-[var(--bg)] p-6 sm:p-8">
                 <span className="mb-4 block font-mono text-sm text-[var(--accent)]">
@@ -102,8 +114,8 @@ export default function AboutPage() {
         </div>
 
         {/* Closing */}
-        <div className="border-t border-[var(--border)] pt-16">
-          <p className="max-w-xl text-xl font-medium leading-relaxed tracking-tight text-[var(--text-primary)]">
+        <div className="border-t border-[var(--border)] pt-12">
+          <p className="max-w-xl text-lg font-medium leading-relaxed text-[var(--text-primary)]">
             {closing}
           </p>
         </div>

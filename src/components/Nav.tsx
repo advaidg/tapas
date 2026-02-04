@@ -48,7 +48,7 @@ export default function Nav() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative font-mono text-[11px] uppercase tracking-[0.15em] transition-colors ${
+                className={`relative font-mono text-[12px] uppercase tracking-[0.14em] transition-colors ${
                   pathname === link.href
                     ? "text-[var(--accent)]"
                     : "text-[var(--text-dim)] hover:text-[var(--text-primary)]"
@@ -110,7 +110,7 @@ export default function Nav() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className={`py-3 font-mono text-xs uppercase tracking-[0.15em] transition-colors ${
+                  className={`py-3 font-mono text-[12px] uppercase tracking-[0.14em] transition-colors ${
                     pathname === link.href
                       ? "text-[var(--accent)]"
                       : "text-[var(--text-dim)] hover:text-[var(--text-primary)]"

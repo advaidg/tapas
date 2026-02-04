@@ -61,7 +61,7 @@ export default function Home() {
                 </Link>
                 <Link
                   href="/capabilities"
-                  className="border border-[var(--border)] px-8 py-3.5 font-mono text-[11px] uppercase tracking-[0.1em] text-[var(--text-dim)] transition-all hover:border-[var(--text-secondary)] hover:text-[var(--text-primary)]"
+                  className="border border-[var(--border)] px-8 py-3.5 font-mono text-[12px] uppercase tracking-[0.1em] text-[var(--text-dim)] transition-all hover:border-[var(--text-secondary)] hover:text-[var(--text-primary)]"
                 >
                   {hero.ctas[1].label}
                 </Link>
@@ -74,12 +74,12 @@ export default function Home() {
 
             <div className="hidden lg:block">
               <div className="mb-6 flex items-center justify-between">
-                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+                <span className="font-mono text-[15px] font-semibold uppercase tracking-[0.16em] text-[var(--text-primary)]">
                   Signals
                 </span>
                 <Link
                   href="/proof"
-                  className="font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--text-dim)] transition-colors hover:text-[var(--text-primary)]"
+                  className="font-mono text-[15px] font-semibold uppercase tracking-[0.14em] text-[var(--text-primary)] transition-colors hover:text-[var(--text-primary)]"
                 >
                   View proof
                 </Link>
@@ -121,7 +121,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl 2xl:max-w-7xl 2xl:max-w-[1600px]">
           <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr]">
             <div>
-              <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+              <span className="mb-4 block font-mono text-[15px] font-semibold uppercase tracking-[0.16em] text-[var(--text-primary)]">
                 Problem
               </span>
               <h2 className="mb-6 text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -151,7 +151,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl 2xl:max-w-7xl 2xl:max-w-[1600px]">
           <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr]">
             <div>
-              <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+              <span className="mb-4 block font-mono text-[15px] font-semibold uppercase tracking-[0.16em] text-[var(--text-primary)]">
                 Approach
               </span>
               <h2 className="mb-6 text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -188,7 +188,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl 2xl:max-w-7xl 2xl:max-w-[1600px]">
           <div className="grid gap-12 lg:grid-cols-[2fr_1fr] lg:items-end">
             <div>
-              <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+              <span className="mb-4 block font-mono text-[15px] font-semibold uppercase tracking-[0.16em] text-[var(--text-primary)]">
                 Proof
               </span>
               <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
@@ -201,7 +201,7 @@ export default function Home() {
               </p>
               <Link
                 href={proofTeaser.cta.href}
-                className="inline-block border border-[var(--accent)] px-8 py-3.5 font-mono text-[11px] uppercase tracking-[0.1em] text-[var(--accent)] transition-all hover:bg-[var(--accent)] hover:text-[var(--bg)]"
+                className="inline-block border border-[var(--accent)] px-8 py-3.5 font-mono text-[12px] uppercase tracking-[0.1em] text-[var(--accent)] transition-all hover:bg-[var(--accent)] hover:text-[var(--bg)]"
               >
                 {proofTeaser.cta.label}
               </Link>
@@ -224,7 +224,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl 2xl:max-w-7xl 2xl:max-w-[1600px]">
           <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr]">
             <div>
-              <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+              <span className="mb-4 block font-mono text-[15px] font-semibold uppercase tracking-[0.16em] text-[var(--text-primary)]">
                 How we work
               </span>
               <h2 className="mb-6 text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -261,7 +261,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl 2xl:max-w-7xl 2xl:max-w-[1600px]">
           <div className="mb-12 flex items-end justify-between gap-6">
             <div>
-              <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+              <span className="mb-4 block font-mono text-[15px] font-semibold uppercase tracking-[0.16em] text-[var(--text-primary)]">
                 Signals
               </span>
               <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -270,7 +270,7 @@ export default function Home() {
             </div>
             <Link
               href="/proof"
-              className="hidden border border-[var(--border)] px-6 py-3 font-mono text-[11px] uppercase tracking-[0.1em] text-[var(--text-dim)] transition-all hover:border-[var(--text-secondary)] hover:text-[var(--text-primary)] sm:inline-block"
+              className="hidden border border-[var(--border)] px-6 py-3 font-mono text-[12px] uppercase tracking-[0.1em] text-[var(--text-dim)] transition-all hover:border-[var(--text-secondary)] hover:text-[var(--text-primary)] sm:inline-block"
             >
               View proof
             </Link>
@@ -304,7 +304,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl 2xl:max-w-7xl 2xl:max-w-[1600px]">
           <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:items-center">
             <div>
-              <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+              <span className="mb-4 block font-mono text-[15px] font-semibold uppercase tracking-[0.16em] text-[var(--text-primary)]">
                 Product
               </span>
               <h2 className="mb-6 text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -318,7 +318,7 @@ export default function Home() {
               </p>
               <Link
                 href={product.cta.href}
-                className="inline-block border border-[var(--accent)] px-8 py-3.5 font-mono text-[11px] uppercase tracking-[0.1em] text-[var(--accent)] transition-all hover:bg-[var(--accent)] hover:text-[var(--bg)]"
+                className="inline-block border border-[var(--accent)] px-8 py-3.5 font-mono text-[12px] uppercase tracking-[0.1em] text-[var(--accent)] transition-all hover:bg-[var(--accent)] hover:text-[var(--bg)]"
               >
                 {product.cta.label}
               </Link>
@@ -350,7 +350,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl 2xl:max-w-7xl 2xl:max-w-[1600px]">
           <div className="grid gap-16 lg:grid-cols-[1fr_1fr]">
             <div>
-              <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+              <span className="mb-4 block font-mono text-[15px] font-semibold uppercase tracking-[0.16em] text-[var(--text-primary)]">
                 Get in touch
               </span>
               <h2 className="mb-6 text-3xl font-semibold tracking-tight sm:text-4xl">

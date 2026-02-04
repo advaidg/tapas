@@ -148,50 +148,68 @@ export const siteContent = {
 
   capabilities: {
     intro:
-      "Deep engineering across AI, platform, quality, and data\u2014delivered with a product mindset.",
+      "Elite engineering services designed to ship durable software, intelligent systems, and measurable business outcomes.",
     domains: [
       {
-        title: "AI Engineering",
+        title: "Digital Application Engineering",
         items: [
-          "Production LLM applications",
-          "RAG systems with evaluation-first design",
-          "Safety and guardrails",
-          "Monitoring and feedback loops",
+          "Custom application development",
+          "Web & cloud-native apps",
+          "Microservices & API-first systems",
+          "Modernization & re-platforming",
+          "Legacy \u2192 cloud / microservices",
+          "Monolith \u2192 event-driven",
+          "Product engineering (MVP \u2192 scale)",
+          "Startup & internal product builds",
         ],
       },
       {
-        title: "Cloud & Platform",
+        title: "AI-Powered Solutions & Platforms",
         items: [
-          "Kubernetes and container platforms",
-          "Secure reference architectures",
-          "Practical observability",
-          "Cost discipline",
+          "AI application development",
+          "AI copilots",
+          "Intelligent dashboards",
+          "Enterprise AI (LLMs, RAG, agents)",
+          "Private GPTs",
+          "Knowledge assistants",
+          "Process automation with AI",
+          "Decision engines",
+          "AI-driven workflows",
         ],
       },
       {
-        title: "Quality Intelligence",
+        title: "Intelligent Document Processing (IDP)",
         items: [
-          "Risk-based automation",
-          "CI signal health",
-          "Real-user flow coverage",
-          "Release confidence",
+          "OCR + AI extraction",
+          "Invoice / KYC / claims automation",
+          "Human-in-the-loop review systems",
+          "Unstructured \u2192 real-time decisions",
         ],
       },
       {
-        title: "Data & Search",
+        title: "Application Reliability & Support Engineering",
         items: [
-          "Search relevance",
-          "Vector and hybrid retrieval",
-          "Data pipelines and governance",
-          "Trustworthy knowledge systems",
+          "L2 / L3 intelligent support",
+          "AI-assisted incident resolution",
+          "Performance & cost optimization",
+          "Operational playbooks and SLAs",
+        ],
+      },
+      {
+        title: "Platform, Cloud & DevOps Engineering",
+        items: [
+          "Cloud architecture (AWS / Azure / GCP)",
+          "DevOps & CI/CD",
+          "Secure, scalable platforms",
+          "Infrastructure automation",
         ],
       },
     ],
     notes: [
-      "AI should reduce risk\u2014not introduce new ones.",
-      "Infrastructure should fade into the background\u2014not demand constant attention.",
-      "Quality becomes an engineering advantage, not a bottleneck.",
-      "When information is reliable, velocity increases naturally.",
+      "Flagship focus on AI-powered solutions, built for measurable outcomes.",
+      "IDP transforms unstructured documents into real-time decisions.",
+      "Reliability and support are strategic, not ticket-driven.",
+      "Platform engineering underpins every pillar we deliver.",
     ],
   },
 
@@ -260,27 +278,29 @@ export const siteContent = {
 
   about: {
     intro:
-      "TapasNGS exists to help teams build systems that endure\u2014technically, operationally, and culturally.",
+      "We are a collective of engineers driven by a shared purpose: to build solutions that make life simpler, smarter, and more reliable. We believe innovation happens every day when engineering excellence meets craftsmanship and the latest industry trends\u2014where every line of code, every design decision, and every interaction reflects intention, clarity, and quality. Using AI, we make life more meaningful and remain committed to community growth.",
     values: [
-      "Craftsmanship",
-      "Rigor",
-      "Simplicity",
-      "Reliability",
-      "Partnership",
+      "Simplicity \u2014 clarity, ease, and meaning without stripping away purpose",
+      "Innovation \u2014 pushing boundaries with impact, not novelty",
+      "Relationships \u2014 strong partnerships built on trust and collaboration",
+      "Reliability \u2014 systems and promises that stand strong and perform consistently",
+      "Transparency \u2014 clarity and honesty through every milestone and decision",
     ],
     beliefs: [
-      "Engineering is a craft",
-      "Quality is a system property",
-      "AI must be treated with seriousness",
-      "Calm systems outperform chaotic ones over time",
+      "Engineering excellence",
+      "Quality first",
+      "AI with purpose",
+      "Reliability always",
+      "Craftsmanship in every detail",
     ],
     whoWeWorkWith: [
-      "Engineering-led organizations",
-      "Teams operating at scale",
-      "Leaders who value long-term stability",
-      "Companies willing to measure outcomes honestly",
+      "Teams who value clarity, quality, and long-term outcomes",
+      "Organizations embracing AI with responsibility",
+      "Partners who believe in transparency and collaboration",
+      "Leaders committed to building reliable systems",
     ],
-    closing: "Leadership isn\u2019t volume. It\u2019s consistency.",
+    closing:
+      "Innovation with purpose. Engineering with integrity. Solutions that last. Technology becomes meaningful when it uplifts people\u2014that\u2019s why we build with heart.",
   },
 
   contact: {

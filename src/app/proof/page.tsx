@@ -26,7 +26,7 @@ export default function ProofPage() {
       />
       <div className="mx-auto max-w-5xl">
         <div className="mb-16 max-w-2xl">
-          <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+          <span className="mb-6 block font-mono text-[15px] font-semibold uppercase tracking-[0.16em] text-[var(--text-primary)]">
             {siteContent.proof.title}
           </span>
           <h1 className="mb-4 text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -40,7 +40,7 @@ export default function ProofPage() {
           </p>
         </div>
         <div className="mb-16 flex flex-wrap items-center gap-4 border border-[var(--border)] bg-[var(--bg-surface)] px-6 py-4">
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+          <span className="font-mono text-[15px] font-semibold uppercase tracking-[0.16em] text-[var(--text-primary)]">
             Flagship product
           </span>
           <div className="h-6 w-px bg-[var(--border)]" />
@@ -52,7 +52,7 @@ export default function ProofPage() {
         <ProofConsole />
 
         <div className="mt-24 border-t border-[var(--border)] pt-16">
-          <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+          <span className="mb-6 block font-mono text-[15px] font-semibold uppercase tracking-[0.16em] text-[var(--text-primary)]">
             Example outcomes
           </span>
           <div className="grid gap-6 lg:grid-cols-3 2xl:grid-cols-4">

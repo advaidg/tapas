@@ -24,7 +24,7 @@ export default function CapabilitiesPage() {
       />
       <div className="mx-auto max-w-7xl 2xl:max-w-7xl 2xl:max-w-[1600px]">
         <div className="mb-24 max-w-3xl">
-          <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+          <span className="mb-6 block font-mono text-[15px] font-semibold uppercase tracking-[0.16em] text-[var(--text-primary)]">
             Capabilities
           </span>
           <p className="text-2xl leading-relaxed tracking-tight text-[var(--text-primary)] sm:text-3xl">
@@ -32,19 +32,30 @@ export default function CapabilitiesPage() {
           </p>
         </div>
 
-        <div className="grid gap-px bg-[var(--border)] sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+        <div className="grid gap-px bg-[var(--border)] sm:grid-cols-2 lg:grid-cols-3">
           {domains.map((domain, i) => (
             <div
               key={domain.title}
-              className="relative bg-[var(--bg)] p-10 sm:p-12"
+              className={`relative bg-[var(--bg)] p-10 sm:p-12 ${
+                domain.title === "AI-Powered Solutions & Platforms"
+                  ? "bg-[var(--bg-surface)]"
+                  : ""
+              }`}
             >
-              <div className="mb-8 flex items-center gap-4">
-                <span className="font-mono text-3xl font-light text-[var(--border-accent)]">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <h2 className="text-xl font-semibold tracking-tight">
-                  {domain.title}
-                </h2>
+              <div className="mb-8 flex items-start justify-between gap-4">
+                <div className="flex items-center gap-4">
+                  <span className="font-mono text-3xl font-light text-[var(--border-accent)]">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h2 className="text-xl font-semibold tracking-tight">
+                    {domain.title}
+                  </h2>
+                </div>
+                {domain.title === "AI-Powered Solutions & Platforms" && (
+                  <span className="font-mono text-[15px] font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">
+                    Flagship
+                  </span>
+                )}
               </div>
               <ul className="space-y-4">
                 {domain.items.map((item) => (
@@ -59,10 +70,36 @@ export default function CapabilitiesPage() {
               </ul>
             </div>
           ))}
+          <div className="relative bg-[var(--bg-surface)] p-10 sm:p-12">
+            <div className="mb-8 flex items-center gap-4">
+              <span className="font-mono text-3xl font-light text-[var(--border-accent)]">
+                06
+              </span>
+              <h2 className="text-xl font-semibold tracking-tight">
+                Delivery model
+              </h2>
+            </div>
+            <ul className="space-y-4">
+              {[
+                "Discovery \u2192 build \u2192 operate",
+                "Senior engineers only",
+                "Outcome-based milestones",
+                "Transparent delivery and reporting",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-3 text-sm leading-relaxed text-[var(--text-primary)]"
+                >
+                  <span className="mt-2 block h-px w-4 shrink-0 bg-[var(--accent)]" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <div className="mt-24">
-          <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+          <span className="mb-6 block font-mono text-[15px] font-semibold uppercase tracking-[0.16em] text-[var(--text-primary)]">
             Design stance
           </span>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">

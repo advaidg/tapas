@@ -39,7 +39,7 @@ export default function ProofConsole() {
           <button
             key={d}
             onClick={() => setFilter(d)}
-            className={`border px-5 py-2 font-mono text-[11px] uppercase tracking-[0.1em] transition-all ${
+            className={`border px-5 py-2 font-mono text-[12px] uppercase tracking-[0.1em] transition-all ${
               filter === d
                 ? "border-[var(--accent)] bg-[var(--accent)] text-[var(--bg)]"
                 : "border-[var(--border)] text-[var(--text-dim)] hover:border-[var(--text-secondary)] hover:text-[var(--text-primary)]"
@@ -68,14 +68,14 @@ export default function ProofConsole() {
                   SIG_{signal.id}
                 </span>
                 <span className="h-px flex-1 bg-[var(--border)]" />
-                <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--text-dim)]">
+                <span className="font-mono text-[15px] font-semibold uppercase tracking-[0.14em] text-[var(--text-primary)]">
                   {signal.domain}
                 </span>
               </div>
 
               <div className="grid gap-6 sm:grid-cols-3">
                 <div>
-                  <span className="mb-2 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--text-dim)]">
+                  <span className="mb-2 flex items-center gap-2 font-mono text-[15px] font-semibold uppercase tracking-[0.14em] text-[var(--text-primary)]">
                     <span className="h-px w-3 bg-[var(--text-dim)]" />
                     Context
                   </span>
@@ -84,7 +84,7 @@ export default function ProofConsole() {
                   </p>
                 </div>
                 <div>
-                  <span className="mb-2 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--text-dim)]">
+                  <span className="mb-2 flex items-center gap-2 font-mono text-[15px] font-semibold uppercase tracking-[0.14em] text-[var(--text-primary)]">
                     <span className="h-px w-3 bg-[var(--text-dim)]" />
                     Action
                   </span>
@@ -93,7 +93,7 @@ export default function ProofConsole() {
                   </p>
                 </div>
                 <div>
-                  <span className="mb-2 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--accent)]/60">
+                  <span className="mb-2 flex items-center gap-2 font-mono text-[15px] font-semibold uppercase tracking-[0.14em] text-[var(--accent)]/60">
                     <span className="h-px w-3 bg-[var(--accent)]/40" />
                     Result
                   </span>

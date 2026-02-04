@@ -7,7 +7,7 @@
   --border: #242837;
   --border-accent: #343a4d;
   --text-primary: #f5f6fb;
-  --text-secondary: #b8bdcc;
+  --text-secondary: #f5f6fb;
   --text-dim: #7f869b;
   --accent: #a6ff00;
   --accent-muted: rgba(166, 255, 0, 0.14);
@@ -21,7 +21,7 @@
   --border: #c2c8d6;
   --border-accent: #a7afc3;
   --text-primary: #121622;
-  --text-secondary: #2b3244;
+  --text-secondary: #121622;
   --text-dim: #535b72;
   --accent: #2f6b4f;
   --accent-muted: rgba(47, 107, 79, 0.18);
