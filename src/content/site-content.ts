@@ -96,25 +96,25 @@ export const siteContent = {
     },
 
     product: {
-      title: "Flagship product: niotap.",
-      body: "niotap is an autonomous inbox operations platform that drafts high-quality replies, escalates edge cases, and keeps a full audit trail\u2014so teams respond faster without losing control.",
-      cta: { label: "See it in Proof", href: "/proof" },
+      title: "Flagship product: Orepli.",
+      body: "Orepli is a grounded AI agent for customer conversations. It answers inbound email and powers an embeddable chat widget on your site\u2014both drawing from the same knowledge base, both auto-answering when confident and escalating with a clean summary when not.",
+      cta: { label: "Visit orepli.com", href: "https://orepli.com" },
       highlights: [
-        "AI-drafted replies grounded in internal knowledge",
-        "Confidence-based auto-reply vs. escalation",
-        "Full visibility with logs, metrics, and auditability",
+        "Two channels, one knowledge base: email agent + embeddable chat widget",
+        "Confidence-gated auto-reply with AI-summarised escalation to a human",
+        "Every answer cited; every action logged and reversible",
       ],
       detail:
-        "Built for support and operations teams handling high-volume, rule-driven email. niotap blends automation with human oversight and keeps every decision traceable.",
+        "Built for support, sales, and ops teams drowning in repetitive questions. Orepli blends real automation with real oversight\u2014one monthly token pool, one audit trail, one invoice.",
     },
 
     highlights: {
       title: "Recent highlights.",
       items: [
         {
-          title: "niotap rollout",
+          title: "Orepli launch",
           description:
-            "Deployed autonomous inbox operations with confidence gating and audit trails for a high-volume support team.",
+            "Shipped a dual-channel grounded agent\u2014email automation plus an embeddable chat widget\u2014with per-tenant billing gates and full audit trails.",
         },
         {
           title: "CI signal overhaul",
@@ -221,9 +221,9 @@ export const siteContent = {
       {
         id: "00",
         domain: "AI" as const,
-        context: "High-volume inboxes slowed response times and created inconsistent handling",
-        action: "Deployed niotap with knowledge grounding, confidence gates, and escalation rules",
-        result: "Faster responses with consistent outcomes and full audit trails",
+        context: "High-volume inboxes and on-site questions slowed response times and created inconsistent handling",
+        action: "Deployed Orepli across email and website chat with shared knowledge, confidence gates, and escalation rules",
+        result: "Faster responses with consistent outcomes, citations on every reply, and full audit trails",
       },
       {
         id: "01",
@@ -255,6 +255,12 @@ export const siteContent = {
       },
     ],
     narratives: [
+      {
+        title: "Dual-channel support with Orepli",
+        description:
+          "A growing team was drowning in repetitive questions across email and their website. We deployed Orepli to cover both channels, grounded in the same knowledge base, with confidence gates and AI-summarised human escalations.",
+        result: "One audit trail across channels, faster first-response times, and humans freed for the hard cases.",
+      },
       {
         title: "Stabilizing AI in Production",
         description:
@@ -313,50 +319,74 @@ export const siteContent = {
   },
 
   product: {
-    name: "niotap",
+    name: "Orepli",
+    url: "https://orepli.com",
     tagline:
-      "Autonomous inbox operations for teams that need speed with control.",
+      "One knowledge base. Two channels. Email replies and on-site chat, both grounded in your own docs.",
     oneLiner:
-      "niotap drafts high-quality replies, escalates edge cases, and keeps a full audit trail\u2014so teams respond faster without losing control.",
+      "Orepli reads every inbound email and powers an embeddable chat widget on your site. It drafts high-quality replies, escalates edge cases with an AI-generated summary, and keeps a full audit trail\u2014so teams respond faster without losing control.",
     whatItSolves:
-      "Support and operations teams spend too much time triaging, drafting, and routing emails. niotap reduces manual effort by automating first-line responses while enforcing rules, knowledge, and escalation policies.",
+      "Support, sales, and operations teams spend hours a week triaging, drafting, and routing the same questions. Some arrive as email, others land on the website. Orepli covers both, from a single knowledge base, so a customer gets the same grounded answer wherever they ask\u2014and humans only see the cases that genuinely need them.",
     howItWorks: [
-      "Connect an inbox (Gmail or IMAP/SMTP)",
-      "Upload knowledge (FAQs, policies, SOPs, product docs)",
-      "Set automation rules (confidence thresholds, escalation targets, tone)",
-      "Automated response flow drafts replies, applies rules, and escalates where needed",
-      "Full visibility with activity logs, metrics, and auditability",
+      "Connect an inbox (Gmail OAuth or IMAP/SMTP)",
+      "Upload your knowledge base (FAQs, policies, SOPs, product docs)",
+      "Create an embeddable chat widget and paste a one-line script on your site",
+      "Tune tone, confidence thresholds, and escalation targets per mailbox",
+      "Orepli drafts grounded replies across email and chat, auto-sends when confident, escalates with a summary when not",
+      "Full visibility: per-message citations, token usage, timelines, and dead-letter recovery",
     ],
     capabilities: [
-      "AI-drafted replies grounded in your internal knowledge base",
-      "Confidence-based auto-reply vs. escalation",
-      "Configurable tone, CC rules, and escalation destinations",
-      "Gmail and IMAP/SMTP integrations",
-      "Admin dashboard to manage tenants, users, and mailbox configurations",
-      "Audit trails for every decision and action",
+      "Email agent: Gmail OAuth + IMAP/SMTP, confidence-gated auto-reply, per-mailbox tone",
+      "Chat widget: one-line embed, per-widget public key and origin allowlist, admin live preview",
+      "Grounded retrieval with pgvector; every answer cites its KB chunks",
+      "AI-summarised escalations with visitor comment routed to your team",
+      "Shared token pool across channels, hard cap at 2\u00D7 the included allotment",
+      "Multi-tenant, with admin console for users, subscriptions, and dead-letter retries",
+      "Security: hashed API keys, CSP, origin enforcement, rate limits per widget",
     ],
     differentiation:
-      "niotap is not just a chatbot. It is an operations system for email\u2014built for control, compliance, and scale. It blends automation with human oversight and keeps every decision traceable.",
+      "Orepli isn\u2019t a chatbot you bolt on. It\u2019s an operations system for customer conversations\u2014one pipeline, one audit trail, two channels. Built for control, compliance, and scale from day one.",
     audiences: [
-      "Customer support teams",
-      "Operations and compliance teams",
-      "Internal help desks",
-      "Any team handling high-volume, rule-driven email",
+      "Customer support teams running shared inboxes",
+      "Sales and ops teams handling high-volume repetitive questions",
+      "Product and marketing sites that need a grounded on-site assistant",
+      "Any team that wants AI answers with citations\u2014not guesses",
     ],
     positioning:
-      "niotap is a flagship product within Tapas Next Gen Systems, focused on operational AI. It showcases our approach to building secure, auditable automation systems that plug into real business workflows and deliver measurable efficiency gains.",
+      "Orepli is the flagship product within Tapas Next Gen Systems. It\u2019s where we prove our thesis: grounded AI is a system design problem, not a model problem. Auditable by default. Safe by default. Useful on day one.",
+    plans: [
+      {
+        tier: "Starter",
+        price: "$49",
+        blurb: "For a founder or a small team automating a single support queue.",
+        includes: "1 mailbox, 10M tokens/mo, email + widget, draft-only or auto-send",
+      },
+      {
+        tier: "Growth",
+        price: "$99",
+        blurb: "For small support teams running separate queues for sales, ops, and support.",
+        includes: "3 mailboxes, 40M tokens/mo, per-mailbox tone + KB, priority support",
+      },
+      {
+        tier: "Scale",
+        price: "$199",
+        blurb: "For teams running RAG-native conversations across brands and regions.",
+        includes: "5 mailboxes, 100M tokens/mo, extra mailboxes $12/ea, Slack support",
+      },
+    ],
+    cta: { label: "Visit orepli.com", href: "https://orepli.com" },
   },
 
   products: {
     title: "Products built with operational rigor.",
     intro:
-      "TapasNGS builds products that prove our engineering philosophy in the real world. niotap is the flagship\u2014an autonomous inbox operations platform built for control, compliance, and scale.",
+      "TapasNGS builds products that prove our engineering philosophy in the real world. Orepli is the flagship\u2014a grounded AI agent that handles customer conversations across email and your website, with citations, confidence gates, and a full audit trail.",
     highlights: [
-      "Autonomous inbox operations with confidence gates",
-      "Knowledge-grounded drafting with full audit trails",
-      "Escalation policies for edge cases and compliance",
+      "Two channels, one knowledge base\u2014email agent and embeddable chat widget",
+      "Confidence-gated auto-reply with AI-summarised human escalation",
+      "Per-tenant isolation, hashed API keys, and hard billing caps by design",
     ],
-    cta: { label: "Talk to us about niotap", href: "/contact" },
+    cta: { label: "Visit orepli.com", href: "https://orepli.com" },
   },
 
   privacy: {
@@ -374,6 +404,7 @@ export const siteContent = {
     copyright: `\u00A9 ${new Date().getFullYear()} TapasNGS. All rights reserved.`,
     links: [
       { label: "Privacy", href: "/privacy" },
+      { label: "Orepli", href: "https://orepli.com" },
       { label: "Contact", href: "/contact" },
     ],
   },

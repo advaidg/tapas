@@ -35,16 +35,27 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="flex gap-8">
-            {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="font-mono text-[15px] font-semibold uppercase tracking-[0.14em] text-[var(--text-primary)] transition-colors hover:text-[var(--text-secondary)]"
-              >
-                {link.label}
-              </Link>
-            ))}
+          <div className="flex flex-wrap gap-8">
+            {links.map((link) => {
+              const external = link.href.startsWith("http");
+              const className =
+                "font-mono text-[15px] font-semibold uppercase tracking-[0.14em] text-[var(--text-primary)] transition-colors hover:text-[var(--accent)]";
+              return external ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={className}
+                >
+                  {link.label} ↗
+                </a>
+              ) : (
+                <Link key={link.href} href={link.href} className={className}>
+                  {link.label}
+                </Link>
+              );
+            })}
           </div>
         </div>
 

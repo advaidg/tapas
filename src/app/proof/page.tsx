@@ -39,16 +39,28 @@ export default function ProofPage() {
             {siteContent.proof.intro}
           </p>
         </div>
-        <div className="mb-16 flex flex-wrap items-center gap-4 border border-[var(--border)] bg-[var(--bg-surface)] px-6 py-4">
+        <a
+          href={product.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mb-16 flex flex-wrap items-center gap-4 border border-[var(--border)] bg-[var(--bg-surface)] px-6 py-4 no-underline transition-colors hover:border-[var(--accent)]"
+        >
           <span className="font-mono text-[15px] font-semibold uppercase tracking-[0.16em] text-[var(--text-primary)]">
             Flagship product
           </span>
           <div className="h-6 w-px bg-[var(--border)]" />
-          <Image src="/niotap.png" alt="niotap" width={96} height={28} />
+          <Image src="/orepli.png" alt="Orepli" width={96} height={64} className="h-7 w-auto" />
+          <span className="text-xl font-semibold tracking-tight text-[var(--text-primary)]">
+            {product.name}
+          </span>
+          <span className="hidden h-4 w-px bg-[var(--border)] sm:block" />
           <span className="text-sm text-[var(--text-primary)]">
             {product.tagline}
           </span>
-        </div>
+          <span className="ml-auto font-mono text-xs uppercase tracking-[0.14em] text-[var(--accent)]">
+            orepli.com →
+          </span>
+        </a>
         <ProofConsole />
 
         <div className="mt-24 border-t border-[var(--border)] pt-16">

@@ -28,7 +28,7 @@ export default function AboutPage() {
           <span className="mb-6 block font-mono text-[15px] font-semibold uppercase tracking-[0.16em] text-[var(--text-primary)]">
             About
           </span>
-          <p className="max-w-none text-lg leading-relaxed text-[var(--text-secondary)] sm:text-xl text-justify">
+          <p className="max-w-none text-2xl leading-relaxed tracking-tight text-[var(--text-primary)] sm:text-3xl text-justify">
             {intro}
           </p>
         </div>
