@@ -96,16 +96,16 @@ export const siteContent = {
     },
 
     product: {
-      title: "Flagship product: Orepli.",
-      body: "Orepli is a grounded AI agent for customer conversations. It answers inbound email and powers an embeddable chat widget on your site\u2014both drawing from the same knowledge base, both auto-answering when confident and escalating with a clean summary when not.",
-      cta: { label: "Visit orepli.com", href: "https://orepli.com" },
+      title: "Products built to last.",
+      body: "TapasNGS ships two live products: Orepli, a grounded AI agent for customer conversations across email and chat; and FeeGoat, an automated payment collection platform for US and Indian educators and businesses.",
+      cta: { label: "See all products", href: "/products" },
       highlights: [
-        "Two channels, one knowledge base: email agent + embeddable chat widget",
-        "Confidence-gated auto-reply with AI-summarised escalation to a human",
-        "Every answer cited; every action logged and reversible",
+        "Orepli: grounded AI email agent + on-site chat widget from a single knowledge base",
+        "FeeGoat: automated fee collection via Zelle (US) and UPI (India)\u2014zero FeeGoat markup on direct transfers",
+        "Automated WhatsApp and email reminders, real-time dashboards, full audit trails",
       ],
       detail:
-        "Built for support, sales, and ops teams drowning in repetitive questions. Orepli blends real automation with real oversight\u2014one monthly token pool, one audit trail, one invoice.",
+        "Both products are built on the same foundation: auditability by default, no hidden fees, and engineering-grade reliability. Orepli is live at orepli.com. FeeGoat is live at feegoat.com.",
     },
 
     highlights: {
@@ -115,6 +115,11 @@ export const siteContent = {
           title: "Orepli launch",
           description:
             "Shipped a dual-channel grounded agent\u2014email automation plus an embeddable chat widget\u2014with per-tenant billing gates and full audit trails.",
+        },
+        {
+          title: "FeeGoat — US & India",
+          description:
+            "Shipped an automated fee collection platform for educators and small businesses across the US (Zelle) and India (UPI)\u2014with automated reminders and real-time dashboards.",
         },
         {
           title: "CI signal overhaul",
@@ -318,6 +323,79 @@ export const siteContent = {
     formspreeEndpoint: "https://formspree.io/f/xnjzdydz",
   },
 
+  feegoat: {
+    name: "FeeGoat",
+    url: "https://feegoat.com",
+    tagline:
+      "Automated payment collection for educators and businesses\u2014built for the US and India.",
+    oneLiner:
+      "FeeGoat handles payment collection via Zelle (US) and UPI (India), sends automated reminders over WhatsApp and email, and surfaces real-time collection analytics\u2014so you stop chasing payments manually.",
+    whatItSolves:
+      "Educators, tutors, coaching centres, clinics, and small businesses lose hours each month manually sending payment reminders and following up on outstanding fees. FeeGoat automates the full collection cycle\u2014payment links, automated reminders, and reconciliation\u2014across US and Indian markets.",
+    markets: [
+      {
+        region: "United States",
+        method: "Zelle",
+        description:
+          "Direct bank-to-bank transfers. No transaction fee, no markup\u2014your customers pay the full amount, you receive the full amount.",
+      },
+      {
+        region: "India",
+        method: "UPI",
+        description:
+          "Zero-gateway-fee UPI collection. Direct bank transfers with no FeeGoat cut\u2014automated reminders sent via WhatsApp and email.",
+      },
+    ],
+    howItWorks: [
+      "Add your students or clients to FeeGoat",
+      "Create a billing plan\u2014one-time, recurring, or custom schedule",
+      "FeeGoat generates payment links and sends them via WhatsApp or email",
+      "Automated reminders go out on your schedule\u2014no manual follow-up",
+      "Payments arrive directly in your bank account via Zelle or UPI",
+      "Real-time dashboard tracks collected, pending, and overdue",
+    ],
+    capabilities: [
+      "Zelle (US) and UPI (India)\u2014zero FeeGoat markup on direct bank transfers",
+      "Automated WhatsApp and email payment reminders",
+      "Payment links and digital invoices per student or client",
+      "Recurring and one-time billing plans",
+      "Bulk billing for cohorts, batches, and groups",
+      "Real-time collection dashboard with outstanding and overdue views",
+      "Student and client roster management",
+      "Card and netbanking payments available where direct transfer isn\u2019t possible",
+    ],
+    differentiation:
+      "FeeGoat is built specifically for educators and small businesses\u2014not a generic payment gateway bolted onto a spreadsheet. Direct bank payment methods mean zero FeeGoat markup on collections. Automated reminders mean you stop chasing. Real-time dashboards mean you always know where you stand.",
+    audiences: [
+      "Tutors and educators managing student fee cycles",
+      "Coaching centres and training institutes in India and the US",
+      "Clinics and professional service providers",
+      "Small businesses collecting recurring payments",
+      "Any business operating across US and Indian markets",
+    ],
+    plans: [
+      {
+        tier: "Free",
+        price: "$0",
+        blurb: "For individuals and small operators just getting started.",
+        includes: "Up to 50 students, Zelle and UPI collection, payment links, basic reminders",
+      },
+      {
+        tier: "Growth",
+        price: "$19",
+        blurb: "For growing businesses with larger rosters and more automation.",
+        includes: "Unlimited students, WhatsApp reminders, bulk billing, analytics dashboard",
+      },
+      {
+        tier: "Pro",
+        price: "$49",
+        blurb: "For multi-branch or multi-staff operations.",
+        includes: "Multi-user accounts, priority support, custom branding, advanced reporting",
+      },
+    ],
+    cta: { label: "Visit feegoat.com", href: "https://feegoat.com" },
+  },
+
   product: {
     name: "Orepli",
     url: "https://orepli.com",
@@ -380,13 +458,13 @@ export const siteContent = {
   products: {
     title: "Products built with operational rigor.",
     intro:
-      "TapasNGS builds products that prove our engineering philosophy in the real world. Orepli is the flagship\u2014a grounded AI agent that handles customer conversations across email and your website, with citations, confidence gates, and a full audit trail.",
+      "TapasNGS ships products that prove our engineering philosophy in the real world. Two live products\u2014one for AI-powered customer conversations, one for automated payment collection\u2014both built for reliability, transparency, and measurable outcomes.",
     highlights: [
-      "Two channels, one knowledge base\u2014email agent and embeddable chat widget",
-      "Confidence-gated auto-reply with AI-summarised human escalation",
-      "Per-tenant isolation, hashed API keys, and hard billing caps by design",
+      "Two live products serving real customers across the US and India",
+      "No hallucinations, no hidden markups\u2014every system is auditable",
+      "Engineering-grade reliability built in from day one, not bolted on",
     ],
-    cta: { label: "Visit orepli.com", href: "https://orepli.com" },
+    cta: { label: "Explore products", href: "/products" },
   },
 
   privacy: {
@@ -405,6 +483,7 @@ export const siteContent = {
     links: [
       { label: "Privacy", href: "/privacy" },
       { label: "Orepli", href: "https://orepli.com" },
+      { label: "FeeGoat", href: "https://feegoat.com" },
       { label: "Contact", href: "/contact" },
     ],
   },

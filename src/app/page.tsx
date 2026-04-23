@@ -316,14 +316,12 @@ export default function Home() {
               <p className="mb-8 text-sm leading-relaxed text-[var(--text-secondary)]">
                 {product.detail}
               </p>
-              <a
+              <Link
                 href={product.cta.href}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="inline-block border border-[var(--accent)] bg-[var(--accent)] px-8 py-3.5 font-mono text-[12px] uppercase tracking-[0.1em] text-[var(--bg)] transition-all hover:bg-transparent hover:text-[var(--accent)]"
               >
                 {product.cta.label} →
-              </a>
+              </Link>
             </div>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
               {product.highlights.map((item, i) => (
